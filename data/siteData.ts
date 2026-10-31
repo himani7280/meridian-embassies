@@ -1,3 +1,5 @@
+import rawData from "./siteData.json";
+
 export interface NavLink {
   label: string;
   href: string;
@@ -198,3 +200,91 @@ export interface NewsPost {
 export interface ContactSubmission {
   id: string;
 }
+
+export interface LegalContent {
+  eyebrow: string;
+  title: string;
+  titleAccent: string;
+  updated: string;
+  intro: string;
+  sections: { heading: string; body: string[] }[];
+}
+
+export type PageBanner = { title: string };
+
+export type PageBannerKey =
+  | "about"
+  | "services"
+  | "servicesDetails"
+  | "visaPassport"
+  | "blog"
+  | "blogDetails"
+  | "contact"
+  | "privacyPolicy"
+  | "terms";
+
+/* ---------- JSON-backed content ---------- */
+
+const { globalTheme, Meridian } = rawData;
+const { sections } = Meridian;
+const chrome = sections.SiteChrome.variants;
+const heroes = sections.Hero.variants;
+
+export { globalTheme };
+
+export const pageBanners: Record<PageBannerKey, PageBanner> = {
+  about: heroes.MeridianAboutHero1,
+  services: heroes.MeridianServicesHero1,
+  servicesDetails: heroes.MeridianServicesDetailHero1,
+  visaPassport: heroes.MeridianVisaHero1,
+  blog: heroes.MeridianBlogHero1,
+  blogDetails: heroes.MeridianBlogDetailHero1,
+  contact: heroes.MeridianContactHero1,
+  privacyPolicy: heroes.MeridianPrivacyHero1,
+  terms: heroes.MeridianTermsHero1,
+};
+
+export const legalPages: { privacy: LegalContent; terms: LegalContent } = {
+  privacy: sections.Legal.variants.MeridianPrivacy1,
+  terms: sections.Legal.variants.MeridianTerms1,
+};
+
+export const getSite = async (): Promise<SiteData> => ({
+  brand: chrome.MeridianHeader1.brand,
+  nav: chrome.MeridianHeader1.nav,
+  cta: chrome.MeridianHeader1.cta,
+  quickLinks: chrome.MeridianFooter1.quickLinks,
+  contact: chrome.MeridianFooter1.contact,
+  social: chrome.MeridianFooter1.social as SiteData["social"],
+  legal: chrome.MeridianFooter1.legal,
+});
+
+export const getHome = async (): Promise<HomeData> => ({
+  hero: heroes.MeridianHomeHero1,
+  about: sections.About.variants.MeridianAbout1,
+  services: sections.Services.variants.MeridianHomeServices1,
+  process: sections.Process.variants.MeridianProcess1.section,
+  testimonials: sections.Testimonials.variants.MeridianTestimonials1.section,
+  cta: sections.Cta.variants.MeridianCta1,
+});
+
+export const getServices = async (): Promise<ServicesData> =>
+  sections.ServicesPage.variants.MeridianServicesPage1 as ServicesData;
+
+export const getSteps = async (): Promise<ProcessStep[]> =>
+  sections.Process.variants.MeridianProcess1.steps;
+
+export const getTestimonials = async (): Promise<Testimonial[]> =>
+  sections.Testimonials.variants.MeridianTestimonials1.items;
+
+export const getServiceDetail = async (): Promise<ServiceDetailData> =>
+  sections.ServiceDetail.variants.MeridianServiceDetail1 as ServiceDetailData;
+
+export const getVisaSections = async (): Promise<VisaSection[]> =>
+  sections.VisaPassport.variants.MeridianVisaPassport1.sections as VisaSection[];
+
+export const getNews = async (): Promise<NewsPost[]> =>
+  sections.News.variants.MeridianNews1.posts;
+
+export const getNewsBySlug = async (slug?: string): Promise<NewsPost | undefined> =>
+  (await getNews()).find((post) => post.slug === slug);
