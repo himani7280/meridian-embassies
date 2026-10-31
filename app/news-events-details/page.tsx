@@ -57,7 +57,7 @@ export default async function BlogDetailsPage({
               <time dateTime={new Date().toISOString()} className="text-[15px] text-(color:--color-mute)">
                 {currentDate()}
               </time>
-              <h1 className="mt-6 font-(family-name:--family-title) text-[2rem] font-extrabold leading-[1.12] tracking-tight text-(color:--color-navy) sm:text-4xl lg:text-[2.9rem]">
+              <h1 className="mt-6 py-4 max-w-2xl font-(family-name:--family-title) text-[2rem] font-extrabold leading-[1.12] tracking-tight text-(color:--color-navy) sm:text-4xl lg:text-[2.9rem]">
                 {post.title}
                 <br />
                 <span className="text-(color:--color-brand)">{post.titleAccent}</span>

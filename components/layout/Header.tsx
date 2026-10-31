@@ -73,7 +73,7 @@ export function Header({ nav, cta }: HeaderProps) {
           </Link>
 
           <nav aria-label="Main navigation" className="hidden min-w-0 lg:block">
-            <ul className="flex items-center gap-2 lg:gap-2 xl:gap-6">
+            <ul className="flex items-center gap-2 lg:gap-4 xl:gap-6">
               {nav.map((item) => {
                 const active = isActive(pathname, item.href);
                 return (
