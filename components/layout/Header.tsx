@@ -73,7 +73,7 @@ export function Header({ nav, cta }: HeaderProps) {
           </Link>
 
           <nav aria-label="Main navigation" className="hidden min-w-0 lg:block">
-            <ul className="flex items-center gap-4 lg:gap-4 xl:gap-8">
+            <ul className="flex items-center gap-2 lg:gap-2 xl:gap-6">
               {nav.map((item) => {
                 const active = isActive(pathname, item.href);
                 return (
@@ -103,7 +103,7 @@ export function Header({ nav, cta }: HeaderProps) {
           <div className="flex shrink-0 items-center gap-3">
             <Link
               href={cta.href}
-              className="group hidden items-center gap-2 rounded-md xl:gap-3 bg-gradient-to-b from-(color:--color-brand-400) to-(color:--color-brand-700) whitespace-nowrap px-4 py-2.5 text-sm font-medium text-white shadow-(--shadow-glow) xl:px-5 xl:py-3 xl:text-[15px] transition-all duration-300 hover:-translate-y-0.5 sm:inline-flex"
+              className="group hidden items-center gap-2 rounded-md xl:gap-3 bg-gradient-to-b from-(color:--color-brand-400) to-(color:--color-brand-700) whitespace-nowrap px-5 py-3 mr-2 text-sm font-medium text-white shadow-(--shadow-glow) xl:px-5 xl:py-3 xl:text-[15px] transition-all duration-300 hover:-translate-y-0.5 sm:inline-flex"
             >
               {cta.label}
               <ArrowRight
