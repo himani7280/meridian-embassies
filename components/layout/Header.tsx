@@ -60,7 +60,7 @@ export function Header({ nav, cta }: HeaderProps) {
           scrolled ? "shadow-(--shadow-soft)" : "shadow-none",
         )}
       >
-        <div className="mx-auto flex h-[76px] w-full max-w-[1400px] items-center justify-between gap-4 px-4 sm:px-6 lg:h-[90px] lg:gap-5 lg:px-6 xl:h-[100px] xl:gap-6 xl:px-10">
+        <div className="mx-auto flex h-[66px] w-full max-w-[1400px] items-center justify-between gap-4 px-4 sm:h-[70px] sm:px-6 lg:h-[76px] lg:gap-5 lg:px-6 xl:h-[82px] xl:gap-6 xl:px-10">
           <Link href="/" aria-label="The Meridian - Home" className="shrink-0">
             <Image
               src="/img/logo.webp"
@@ -68,7 +68,7 @@ export function Header({ nav, cta }: HeaderProps) {
               width={1853}
               height={462}
               priority
-              className="h-11 w-auto sm:h-[52px] lg:h-[50px] xl:h-[64px]"
+              className="h-11 w-auto sm:h-[52px] lg:h-[52px] xl:h-[64px]"
             />
           </Link>
 
@@ -145,7 +145,7 @@ export function Header({ nav, cta }: HeaderProps) {
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className="fixed left-0 top-0 z-[90] flex h-full w-[82%] max-w-[340px] flex-col bg-white shadow-2xl"
             >
-              <div className="flex h-[76px] items-center justify-between border-b border-(color:--color-navy)/10 px-4">
+              <div className="flex h-[66px] sm:h-[70px] items-center justify-between border-b border-(color:--color-navy)/10 px-4">
                 <Link href="/" aria-label="The Meridian - Home">
                   <Image
                     src="/img/logo.webp"
