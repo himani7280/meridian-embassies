@@ -52,12 +52,12 @@ export function Header({ nav, cta }: HeaderProps) {
       <motion.div
         aria-hidden="true"
         style={{ scaleX: progress }}
-        className="fixed left-0 top-0 z-[70] h-[3px] w-full origin-left bg-(color:--color-brand)"
+        className="fixed left-0 top-0 z-[70] h-[3px] w-full origin-left bg-[#dc3a1f]"
       />
       <header
         className={cn(
           "sticky top-0 z-50 w-full bg-white/95 backdrop-blur transition-shadow duration-300",
-          scrolled ? "shadow-(--shadow-soft)" : "shadow-none",
+          scrolled ? "shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]" : "shadow-none",
         )}
       >
         <div className="mx-auto flex h-[66px] w-full max-w-[1400px] items-center justify-between gap-4 px-4 sm:h-[70px] sm:px-6 lg:h-[76px] lg:gap-5 lg:px-6 xl:h-[82px] xl:gap-6 xl:px-10">
@@ -82,7 +82,7 @@ export function Header({ nav, cta }: HeaderProps) {
                       href={item.href}
                       className={cn(
                         "block whitespace-nowrap py-2 text-[13px] font-medium transition-colors duration-200 xl:text-[15px]",
-                        active ? "text-(color:--color-brand)" : "text-(color:--color-navy-900) hover:text-(color:--color-brand)",
+                        active ? "text-[#dc3a1f]" : "text-[#071f37] hover:text-[#dc3a1f]",
                       )}
                     >
                       {item.label}
@@ -90,7 +90,7 @@ export function Header({ nav, cta }: HeaderProps) {
                     {active ? (
                       <motion.span
                         layoutId="nav-underline"
-                        className="absolute -bottom-[2px] left-0 h-[2px] w-full rounded bg-(color:--color-brand)"
+                        className="absolute -bottom-[2px] left-0 h-[2px] w-full rounded bg-[#dc3a1f]"
                         transition={{ type: "spring", stiffness: 380, damping: 32 }}
                       />
                     ) : null}
@@ -103,7 +103,7 @@ export function Header({ nav, cta }: HeaderProps) {
           <div className="flex shrink-0 items-center gap-3">
             <Link
               href={cta.href}
-              className="group hidden items-center gap-2 rounded-md xl:gap-3 bg-gradient-to-b from-(color:--color-brand-400) to-(color:--color-brand-700) whitespace-nowrap px-4 py-2.5 text-sm font-medium text-white shadow-(--shadow-glow) xl:px-5 xl:py-3 xl:text-[15px] transition-all duration-300 hover:-translate-y-0.5 sm:inline-flex"
+              className="group hidden items-center gap-2 rounded-md xl:gap-3 bg-gradient-to-b from-[#e8603f] to-[#c8401c] whitespace-nowrap px-4 py-2.5 text-sm font-medium text-white shadow-[0_12px_30px_-10px_rgba(220,58,31,0.55)] xl:px-5 xl:py-3 xl:text-[15px] transition-all duration-300 hover:-translate-y-0.5 sm:inline-flex"
             >
               {cta.label}
               <ArrowRight
@@ -116,7 +116,7 @@ export function Header({ nav, cta }: HeaderProps) {
               onClick={() => setOpen((v) => !v)}
               aria-label={open ? "Close menu" : "Open menu"}
               aria-expanded={open}
-              className="grid h-11 w-11 place-items-center rounded-md border border-(color:--color-navy)/15 text-(color:--color-navy) transition-colors hover:bg-(color:--color-navy-50) lg:hidden"
+              className="grid h-11 w-11 place-items-center rounded-md border border-[#043468]/15 text-[#043468] transition-colors hover:bg-[#f3f7fc] lg:hidden"
             >
               <Menu className="h-5 w-5" />
             </button>
@@ -145,7 +145,7 @@ export function Header({ nav, cta }: HeaderProps) {
               transition={{ duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
               className="fixed left-0 top-0 z-[90] flex h-full w-[82%] max-w-[340px] flex-col bg-white shadow-2xl"
             >
-              <div className="flex h-[66px] sm:h-[70px] items-center justify-between border-b border-(color:--color-navy)/10 px-4">
+              <div className="flex h-[66px] sm:h-[70px] items-center justify-between border-b border-[#043468]/10 px-4">
                 <Link href="/" aria-label="The Meridian - Home">
                   <Image
                     src="/img/logo.webp"
@@ -159,7 +159,7 @@ export function Header({ nav, cta }: HeaderProps) {
                   type="button"
                   onClick={() => setOpen(false)}
                   aria-label="Close menu"
-                  className="grid h-11 w-11 place-items-center rounded-md border border-(color:--color-navy)/15 text-(color:--color-navy) transition-colors hover:bg-(color:--color-navy-50)"
+                  className="grid h-11 w-11 place-items-center rounded-md border border-[#043468]/15 text-[#043468] transition-colors hover:bg-[#f3f7fc]"
                 >
                   <X className="h-5 w-5" />
                 </button>
@@ -179,8 +179,8 @@ export function Header({ nav, cta }: HeaderProps) {
                         className={cn(
                           "flex items-center justify-between rounded-md px-3 py-3 text-base font-medium",
                           active
-                            ? "bg-(color:--color-brand-50) text-(color:--color-brand)"
-                            : "text-(color:--color-navy-900) hover:bg-(color:--color-navy-50)",
+                            ? "bg-[#fff4f1] text-[#dc3a1f]"
+                            : "text-[#071f37] hover:bg-[#f3f7fc]",
                         )}
                       >
                         {item.label}

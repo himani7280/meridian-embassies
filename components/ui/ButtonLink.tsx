@@ -25,9 +25,9 @@ export function ButtonLink({
       href={href}
       className={cn(
         "group relative inline-flex items-center justify-center gap-3 overflow-hidden rounded-md",
-        "bg-gradient-to-b from-(color:--color-brand-400) to-(color:--color-brand-700) font-medium text-white shadow-(--shadow-glow)",
+        "bg-gradient-to-b from-[#e8603f] to-[#c8401c] font-medium text-white shadow-[0_12px_30px_-10px_rgba(220,58,31,0.55)]",
         "transition-all duration-300 hover:-translate-y-0.5 hover:shadow-[0_16px_34px_-10px_rgba(220,58,31,0.7)]",
-        "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-(color:--color-brand)/30",
+        "focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-[#dc3a1f]/30",
         size === "lg" ? "px-7 py-4 text-base" : "px-5 py-3 text-[15px]",
         className,
       )}

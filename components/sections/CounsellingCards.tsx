@@ -20,7 +20,7 @@ export function CounsellingCards({ data }: { data: ServicesData["counselling"] }
       />
       <PlaneTrail
         flip
-        className="absolute right-[6%] top-14 hidden h-[110px] w-[190px] text-(color:--color-brand)/50 lg:block"
+        className="absolute right-[6%] top-14 hidden h-[110px] w-[190px] text-[#dc3a1f]/50 lg:block"
       />
 
       <div className="relative mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
@@ -42,7 +42,7 @@ export function CounsellingCards({ data }: { data: ServicesData["counselling"] }
                 href={item.href}
                 className={cn(
                   "group flex h-full flex-col overflow-hidden bg-[#f3f5f9] transition-all duration-300",
-                  "hover:-translate-y-1 hover:shadow-(--shadow-card) sm:min-h-[190px]",
+                  "hover:-translate-y-1 hover:shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:min-h-[190px]",
                   item.side === "right" ? "sm:flex-row-reverse" : "sm:flex-row",
                 )}
               >
@@ -56,20 +56,20 @@ export function CounsellingCards({ data }: { data: ServicesData["counselling"] }
                   />
                 </span>
                 <span className="flex flex-1 items-center gap-4 p-5 sm:p-6">
-                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-(color:--color-navy-100) text-(color:--color-navy) transition-colors duration-300 group-hover:bg-(color:--color-navy) group-hover:text-white sm:h-[60px] sm:w-[60px]">
+                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-[#e7eff9] text-[#043468] transition-colors duration-300 group-hover:bg-[#043468] group-hover:text-white sm:h-[60px] sm:w-[60px]">
                     <Icon name={item.icon} className="h-7 w-7" strokeWidth={1.5} />
                   </span>
                   <span className="min-w-0">
-                    <span className="block font-(family-name:--family-title) text-lg font-bold text-(color:--color-navy)">
+                    <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-lg font-bold text-[#043468]">
                       {item.title}
                     </span>
-                    <span className="mt-1.5 block text-sm leading-6 text-(color:--color-mute)">
+                    <span className="mt-1.5 block text-sm leading-6 text-[#6b7384]">
                       {item.text}
                     </span>
-                    <span className="mt-3 inline-flex items-center gap-2 border-b border-(color:--color-navy)/60 pb-0.5 text-[13px] font-semibold text-(color:--color-navy)">
+                    <span className="mt-3 inline-flex items-center gap-2 border-b border-[#043468]/60 pb-0.5 text-[13px] font-semibold text-[#043468]">
                       Learn More
                       <ArrowRight
-                        className="h-4 w-4 text-(color:--color-brand) transition-transform duration-300 group-hover:translate-x-1"
+                        className="h-4 w-4 text-[#dc3a1f] transition-transform duration-300 group-hover:translate-x-1"
                         strokeWidth={2}
                       />
                     </span>

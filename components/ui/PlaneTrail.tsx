@@ -1,3 +1,6 @@
+"use client";
+
+import { motion } from "framer-motion";
 import { Plane } from "lucide-react";
 
 function cn(...classes: Array<string | false | null | undefined>): string {
@@ -25,9 +28,13 @@ export function PlaneTrail({
           strokeLinecap="round"
         />
       </svg>
-      <div className="absolute left-[58%] top-[48%] animate-[plane-fly_5s_ease-in-out_infinite]">
+      <motion.div
+        className="absolute left-[58%] top-[48%]"
+        animate={{ x: [0, 8, 0], y: [0, -6, 0], rotate: [0, 3, 0] }}
+        transition={{ duration: 5, ease: "easeInOut", repeat: Infinity }}
+      >
         <Plane className="h-10 w-10 rotate-90 fill-current sm:h-12 sm:w-12" strokeWidth={1} />
-      </div>
+      </motion.div>
     </div>
   );
 }

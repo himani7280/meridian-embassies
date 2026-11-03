@@ -31,7 +31,7 @@ export function HomeServices({ intro, items }: Props) {
 
         <div className="mt-10 grid items-center gap-10 lg:mt-6 lg:grid-cols-[1.02fr_1fr] lg:gap-12">
           <Reveal direction="left">
-            <div className="group relative aspect-[584/470] overflow-hidden rounded-xl shadow-(--shadow-soft)">
+            <div className="group relative aspect-[584/470] overflow-hidden rounded-xl shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
               <Image
                 src="/img/services-main.webp"
                 alt="Traveller smiling at an airport with a passport and boarding pass"
@@ -42,26 +42,26 @@ export function HomeServices({ intro, items }: Props) {
             </div>
           </Reveal>
 
-          <Stagger className="divide-y divide-(color:--color-navy)/10" stagger={0.12}>
+          <Stagger className="divide-y divide-[#043468]/10" stagger={0.12}>
             {items.map((s) => (
               <StaggerItem key={s.id}>
                 <Link
                   href={s.href}
                   className="group flex items-center gap-4 py-5 transition-transform duration-300 hover:translate-x-1.5 sm:gap-5"
                 >
-                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-(color:--color-navy-100) text-(color:--color-navy) transition-colors duration-300 group-hover:bg-(color:--color-navy) group-hover:text-white sm:h-[78px] sm:w-[78px]">
+                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#043468] transition-colors duration-300 group-hover:bg-[#043468] group-hover:text-white sm:h-[78px] sm:w-[78px]">
                     <Icon name={s.icon} className="h-7 w-7 sm:h-9 sm:w-9" strokeWidth={1.4} />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-(family-name:--family-title) text-[1.05rem] font-bold leading-snug text-(color:--color-navy) sm:text-[1.2rem]">
+                    <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-[1.05rem] font-bold leading-snug text-[#043468] sm:text-[1.2rem]">
                       {s.title}
                     </span>
-                    <span className="mt-1 block text-sm leading-6 text-(color:--color-mute) sm:text-[15px]">
+                    <span className="mt-1 block text-sm leading-6 text-[#6b7384] sm:text-[15px]">
                       {s.text}
                     </span>
                   </span>
-                  <span className="hidden h-12 w-px bg-(color:--color-navy)/15 sm:block" />
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-[1.5px] border-(color:--color-brand) text-(color:--color-brand) transition-all duration-300 group-hover:bg-(color:--color-brand) group-hover:text-white sm:h-12 sm:w-12">
+                  <span className="hidden h-12 w-px bg-[#043468]/15 sm:block" />
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-[1.5px] border-[#dc3a1f] text-[#dc3a1f] transition-all duration-300 group-hover:bg-[#dc3a1f] group-hover:text-white sm:h-12 sm:w-12">
                     <ArrowRight className="h-5 w-5" strokeWidth={2} />
                   </span>
                 </Link>

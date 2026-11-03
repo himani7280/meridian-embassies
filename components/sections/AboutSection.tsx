@@ -9,7 +9,7 @@ export function AboutSection({ data }: { data: HomeData["about"] }) {
     <section className="relative pt-6 pb-6 mt-6 mb-6">
       <div className="mx-auto grid w-full max-w-[1320px] items-stretch gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.12fr] lg:gap-14 lg:px-10">
         <Reveal direction="left" className="relative lg:h-full">
-          <div className="group relative aspect-[4/5] overflow-hidden rounded-2xl shadow-(--shadow-soft) lg:aspect-auto lg:h-full lg:min-h-[640px]">
+          <div className="group relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] lg:aspect-auto lg:h-full lg:min-h-[640px]">
             <Image
               src="/img/about-1.webp"
               alt="Smiling traveller holding a passport at the airport"
@@ -32,27 +32,27 @@ export function AboutSection({ data }: { data: HomeData["about"] }) {
             />
           </Reveal>
           <Reveal delay={0.16}>
-            <p className="mt-6 max-w-[620px] text-[15px] leading-7 text-(color:--color-mute) sm:text-base sm:leading-8">
+            <p className="mt-6 max-w-[620px] text-[15px] leading-7 text-[#6b7384] sm:text-base sm:leading-8">
               {data.text}
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
             <div className="mx-auto mt-6 flex max-w-[520px] flex-col items-center text-center">
-              <span className="h-10 w-[2px] bg-(color:--color-navy)" />
+              <span className="h-10 w-[2px] bg-[#043468]" />
               <div className="flex w-full items-center gap-5">
-                <span className="h-px flex-1 bg-(color:--color-navy)/15" />
-                <span className="font-(family-name:--family-title) text-5xl font-extrabold text-(color:--color-navy)">
+                <span className="h-px flex-1 bg-[#043468]/15" />
+                <span className="font-[family-name:Manrope,system-ui,sans-serif] text-5xl font-extrabold text-[#043468]">
                   <CountUp to={data.statValue} suffix={data.statSuffix} />
                 </span>
-                <span className="h-px flex-1 bg-(color:--color-navy)/15" />
+                <span className="h-px flex-1 bg-[#043468]/15" />
               </div>
-              <p className="mt-1 max-w-[270px] text-base text-(color:--color-mute)">{data.statLabel}</p>
+              <p className="mt-1 max-w-[270px] text-base text-[#6b7384]">{data.statLabel}</p>
             </div>
           </Reveal>
 
           <Reveal delay={0.3} direction="right" className="mt-8 lg:mt-auto lg:pt-8">
-            <div className="group relative aspect-[621/270] overflow-hidden rounded-xl shadow-(--shadow-card)">
+            <div className="group relative aspect-[621/270] overflow-hidden rounded-xl shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
               <Image
                 src="/img/about-2.webp"
                 alt="Consultant stamping passport documents"

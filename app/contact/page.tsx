@@ -55,7 +55,7 @@ export default async function ContactPage() {
             className="lg:[&_h2]:text-[3.4rem]"
           />
 
-          <Stagger className="divide-y divide-(color:--color-navy)/10" stagger={0.12}>
+          <Stagger className="divide-y divide-[#043468]/10" stagger={0.12}>
             {rows.map((r) => (
               <StaggerItem key={r.label}>
                 <a
@@ -65,16 +65,16 @@ export default async function ContactPage() {
                     : {})}
                   className="group flex items-center gap-5 py-5 first:pt-0 last:pb-0"
                 >
-                  <span className="grid h-[68px] w-[68px] shrink-0 place-items-center rounded-full bg-(color:--color-navy-100) text-(color:--color-brand) transition-all duration-300 group-hover:bg-(color:--color-brand) group-hover:text-white sm:h-[74px] sm:w-[74px]">
+                  <span className="grid h-[68px] w-[68px] shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f] transition-all duration-300 group-hover:bg-[#dc3a1f] group-hover:text-white sm:h-[74px] sm:w-[74px]">
                     <r.icon className="h-7 w-7" fill="currentColor" strokeWidth={1.5} />
                   </span>
                   <span className="min-w-0">
-                    <span className="block text-[15px] text-(color:--color-mute)">{r.label}</span>
-                    <span className="block break-words font-(family-name:--family-title) text-xl font-bold text-(color:--color-navy) transition-colors group-hover:text-(color:--color-brand) sm:text-[1.5rem]">
+                    <span className="block text-[15px] text-[#6b7384]">{r.label}</span>
+                    <span className="block break-words font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.5rem]">
                       {r.value}
                     </span>
                     {r.note ? (
-                      <span className="block text-[15px] text-(color:--color-mute)">{r.note}</span>
+                      <span className="block text-[15px] text-[#6b7384]">{r.note}</span>
                     ) : null}
                   </span>
                 </a>
@@ -101,7 +101,7 @@ export default async function ContactPage() {
           </Reveal>
 
           <Reveal direction="right" delay={0.1}>
-            <div className="group relative min-h-[320px] overflow-hidden rounded-sm shadow-(--shadow-soft) lg:h-full">
+            <div className="group relative min-h-[320px] overflow-hidden rounded-sm shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] lg:h-full">
               <Image
                 src="/img/contact-passport.webp"
                 alt="Indian passport and boarding pass on a world map"
@@ -127,12 +127,12 @@ export default async function ContactPage() {
             />
             <Reveal delay={0.2} className="mt-7">
               <div className="flex items-center gap-5 bg-[#f1f5fa] p-5 sm:p-6">
-                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-(color:--color-navy-100) text-(color:--color-brand)">
+                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f]">
                   <MapPin className="h-7 w-7" fill="currentColor" strokeWidth={1.5} />
                 </span>
                 <address className="not-italic">
-                  <span className="block text-[15px] text-(color:--color-mute)">Address</span>
-                  <span className="block font-(family-name:--family-title) text-lg font-bold leading-snug text-(color:--color-navy) sm:text-xl">
+                  <span className="block text-[15px] text-[#6b7384]">Address</span>
+                  <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-lg font-bold leading-snug text-[#043468] sm:text-xl">
                     {contact.officeAddress}
                   </span>
                 </address>
@@ -141,7 +141,7 @@ export default async function ContactPage() {
           </div>
 
           <Reveal direction="right">
-            <div className="relative aspect-[663/398] overflow-hidden rounded-sm shadow-(--shadow-soft)">
+            <div className="relative aspect-[663/398] overflow-hidden rounded-sm shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
               <iframe
                 title="Map showing our office location in New York, USA"
                 src={contact.mapEmbed}

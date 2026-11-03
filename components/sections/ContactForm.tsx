@@ -34,7 +34,7 @@ function validate(v: Record<Field, string>): Errors {
 }
 
 const inputClass =
-  "w-full rounded-md border border-(color:--color-navy)/15 bg-white px-4 text-[15px] text-(color:--color-navy) placeholder:text-(color:--color-mute)/70 outline-none transition focus:border-(color:--color-brand) focus:ring-4 focus:ring-(color:--color-brand)/10";
+  "w-full rounded-md border border-[#043468]/15 bg-white px-4 text-[15px] text-[#043468] placeholder:text-[#6b7384]/70 outline-none transition focus:border-[#dc3a1f] focus:ring-4 focus:ring-[#dc3a1f]/10";
 
 export function ContactForm() {
   const router = useRouter();
@@ -73,7 +73,7 @@ export function ContactForm() {
 
   const fieldError = (f: Field) =>
     errors[f] ? (
-      <p role="alert" className="mt-1.5 text-[13px] text-(color:--color-brand)">
+      <p role="alert" className="mt-1.5 text-[13px] text-[#dc3a1f]">
         {errors[f]}
       </p>
     ) : null;
@@ -92,7 +92,7 @@ export function ContactForm() {
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
           <input
-            className={cn(inputClass, "h-14", errors.name && "border-(color:--color-brand)")}
+            className={cn(inputClass, "h-14", errors.name && "border-[#dc3a1f]")}
             type="text"
             name="name"
             placeholder="Full Name"
@@ -105,7 +105,7 @@ export function ContactForm() {
         </div>
         <div>
           <input
-            className={cn(inputClass, "h-14", errors.email && "border-(color:--color-brand)")}
+            className={cn(inputClass, "h-14", errors.email && "border-[#dc3a1f]")}
             type="email"
             name="email"
             placeholder="Email Address"
@@ -118,7 +118,7 @@ export function ContactForm() {
         </div>
         <div>
           <input
-            className={cn(inputClass, "h-14", errors.phone && "border-(color:--color-brand)")}
+            className={cn(inputClass, "h-14", errors.phone && "border-[#dc3a1f]")}
             type="tel"
             name="phone"
             placeholder="Phone Number"
@@ -131,7 +131,7 @@ export function ContactForm() {
         </div>
         <div>
           <input
-            className={cn(inputClass, "h-14", errors.subject && "border-(color:--color-brand)")}
+            className={cn(inputClass, "h-14", errors.subject && "border-[#dc3a1f]")}
             type="text"
             name="subject"
             placeholder="Subject"
@@ -145,7 +145,7 @@ export function ContactForm() {
 
       <div>
         <textarea
-          className={cn(inputClass, "min-h-[150px] resize-y py-4", errors.message && "border-(color:--color-brand)")}
+          className={cn(inputClass, "min-h-[150px] resize-y py-4", errors.message && "border-[#dc3a1f]")}
           name="message"
           placeholder="Your Message"
           aria-label="Your Message"
@@ -159,7 +159,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "sending"}
-        className="group relative inline-flex items-center gap-3 overflow-hidden rounded-md bg-gradient-to-b from-(color:--color-brand-400) to-(color:--color-brand-700) px-7 py-4 text-base font-medium text-white shadow-(--shadow-glow) transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+        className="group relative inline-flex items-center gap-3 overflow-hidden rounded-md bg-gradient-to-b from-[#e8603f] to-[#c8401c] px-7 py-4 text-base font-medium text-white shadow-[0_12px_30px_-10px_rgba(220,58,31,0.55)] transition-all duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
       >
         {status === "sending" ? (
           <>
@@ -181,7 +181,7 @@ export function ContactForm() {
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0 }}
-            className="flex items-start gap-3 rounded-md border border-(color:--color-brand)/30 bg-(color:--color-brand-50) p-4 text-(color:--color-brand-700)"
+            className="flex items-start gap-3 rounded-md border border-[#dc3a1f]/30 bg-[#fff4f1] p-4 text-[#c8401c]"
           >
             <AlertCircle className="mt-0.5 h-5 w-5 shrink-0" />
             <p className="text-[15px]">{errors.form}</p>

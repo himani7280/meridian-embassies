@@ -47,7 +47,7 @@ export default async function BlogPage() {
                 <article className="group">
                   <Link
                     href={`/news-events-details?slug=${post.slug}`}
-                    className="block overflow-hidden rounded-sm shadow-(--shadow-card)"
+                    className="block overflow-hidden rounded-sm shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]"
                     aria-label={`${post.title} ${post.titleAccent}`}
                   >
                     <span className="relative block aspect-[613/363]">
@@ -60,17 +60,17 @@ export default async function BlogPage() {
                       />
                     </span>
                   </Link>
-                  <time dateTime={new Date().toISOString()} className="mt-5 block px-1 text-[15px] text-(color:--color-mute)">
+                  <time dateTime={new Date().toISOString()} className="mt-5 block px-1 text-[15px] text-[#6b7384]">
                     {currentDate()}
                   </time>
-                  <h3 className="mt-2 max-w-[460px] px-1 font-(family-name:--family-title) text-[1.4rem] font-bold leading-snug text-(color:--color-navy) transition-colors group-hover:text-(color:--color-brand) sm:text-[1.6rem]">
+                  <h3 className="mt-2 max-w-[460px] px-1 font-[family-name:Manrope,system-ui,sans-serif] text-[1.4rem] font-bold leading-snug text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.6rem]">
                     <Link href={`/news-events-details?slug=${post.slug}`}>
                       {post.title} {post.titleAccent}
                     </Link>
                   </h3>
                   <Link
                     href={`/news-events-details?slug=${post.slug}`}
-                    className="mt-4 inline-flex items-center gap-2 px-1 font-semibold text-(color:--color-brand)"
+                    className="mt-4 inline-flex items-center gap-2 px-1 font-semibold text-[#dc3a1f]"
                   >
                     Read More
                     <ArrowRight

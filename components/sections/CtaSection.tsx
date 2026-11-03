@@ -3,6 +3,7 @@ import { Phone } from "lucide-react";
 import type { HomeData, SiteData } from "@/data/siteData";
 import { Reveal, Float } from "@/components/motion/Reveal";
 import { ArrowLine } from "@/components/motion/ArrowLine";
+import { RingPulse } from "@/components/motion/RingPulse";
 
 interface Props {
   data: HomeData["cta"];
@@ -11,16 +12,16 @@ interface Props {
 
 export function CtaSection({ data, contact }: Props) {
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-(color:--color-navy-50) via-white to-(color:--color-brand-50) pt-6 pb-6 mt-6 mb-6 shadow-[0_8px_40px_-8px_rgba(4,52,104,0.22)]">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#f3f7fc] via-white to-[#fff4f1] pt-6 pb-6 mt-6 mb-6 shadow-[0_8px_40px_-8px_rgba(4,52,104,0.22)]">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -left-2 top-2 select-none font-(family-name:--family-title) text-[7rem] font-extrabold leading-none tracking-tight text-(color:--color-navy)/[0.045] sm:left-[3%] sm:text-[12rem] lg:top-0 lg:text-[18rem]"
+        className="pointer-events-none absolute -left-2 top-2 select-none font-[family-name:Manrope,system-ui,sans-serif] text-[7rem] font-extrabold leading-none tracking-tight text-[#043468]/[0.045] sm:left-[3%] sm:text-[12rem] lg:top-0 lg:text-[18rem]"
       >
         {data.watermark}
       </span>
       <div
         aria-hidden="true"
-        className="absolute -right-32 top-1/4 hidden h-[560px] w-[560px] rounded-full bg-(color:--color-navy-50) sm:block"
+        className="absolute -right-32 top-1/4 hidden h-[560px] w-[560px] rounded-full bg-[#f3f7fc] sm:block"
       />
       <div
         aria-hidden="true"
@@ -31,11 +32,11 @@ export function CtaSection({ data, contact }: Props) {
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <Reveal direction="left">
-              <h2 className="font-(family-name:--family-title) text-[2rem] font-extrabold leading-[1.12] tracking-tight text-(color:--color-navy) sm:text-4xl lg:text-[2.9rem]">
+              <h2 className="font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-[#043468] sm:text-4xl lg:text-[2.9rem]">
                 {data.titleLine1}
                 <br />
-                <span className="text-(color:--color-brand)">{data.titleAccent}</span>
-                <span className="relative mx-2 inline-block h-12 w-12 -translate-y-1 overflow-hidden rounded-full border-4 border-white align-middle shadow-(--shadow-card) sm:mx-3 sm:h-[84px] sm:w-[84px]">
+                <span className="text-[#dc3a1f]">{data.titleAccent}</span>
+                <span className="relative mx-2 inline-block h-12 w-12 -translate-y-1 overflow-hidden rounded-full border-4 border-white align-middle shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:mx-3 sm:h-[84px] sm:w-[84px]">
                   <Image
                     src="/img/cta-woman.webp"
                     alt=""
@@ -48,7 +49,7 @@ export function CtaSection({ data, contact }: Props) {
               </h2>
             </Reveal>
             <Reveal direction="left" delay={0.12}>
-              <p className="mt-6 max-w-[560px] text-base leading-8 text-(color:--color-navy-900)/80">
+              <p className="mt-6 max-w-[560px] text-base leading-8 text-[#071f37]/80">
                 {data.text}
               </p>
             </Reveal>
@@ -56,7 +57,7 @@ export function CtaSection({ data, contact }: Props) {
 
           <div className="flex lg:col-span-4 lg:justify-center">
             <Float amplitude={12} duration={7}>
-              <div className="relative h-[120px] w-[120px] rounded-full border border-(color:--color-navy)/10 bg-white p-2 shadow-(--shadow-soft) sm:h-[150px] sm:w-[150px] lg:h-[165px] lg:w-[165px]">
+              <div className="relative h-[120px] w-[120px] rounded-full border border-[#043468]/10 bg-white p-2 shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] sm:h-[150px] sm:w-[150px] lg:h-[165px] lg:w-[165px]">
                 <div className="relative h-full w-full overflow-hidden rounded-full">
                   <Image
                     src="/img/cta-man.webp"
@@ -72,19 +73,19 @@ export function CtaSection({ data, contact }: Props) {
         </div>
 
         <div className="mt-6 flex flex-col items-start gap-6 lg:mt-6 lg:flex-row lg:items-center lg:justify-end lg:gap-8">
-          <ArrowLine className="hidden h-4 w-[250px] text-(color:--color-navy) lg:block" />
+          <ArrowLine className="hidden h-4 w-[250px] text-[#043468] lg:block" />
           <Reveal direction="up" delay={0.2}>
-            <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-(color:--color-navy)">
+            <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-[#043468]">
               {data.label}
             </p>
             <a
               href={contact.ctaPhoneHref}
               className="group mt-2 inline-flex items-center gap-3"
             >
-              <span className="grid h-11 w-11 place-items-center rounded-full bg-(color:--color-brand) text-white animate-[ring-pulse_2s_infinite]">
+              <RingPulse className="grid h-11 w-11 place-items-center rounded-full bg-[#dc3a1f] text-white">
                 <Phone className="h-5 w-5" fill="currentColor" strokeWidth={1.5} />
-              </span>
-              <span className="font-(family-name:--family-title) text-2xl font-extrabold text-(color:--color-navy) transition-colors group-hover:text-(color:--color-brand) sm:text-[1.9rem]">
+              </RingPulse>
+              <span className="font-[family-name:Manrope,system-ui,sans-serif] text-2xl font-extrabold text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.9rem]">
                 {contact.ctaPhone}
               </span>
             </a>

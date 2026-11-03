@@ -225,12 +225,10 @@ export type PageBannerKey =
 
 /* ---------- JSON-backed content ---------- */
 
-const { globalTheme, Meridian } = rawData;
+const { Meridian } = rawData;
 const { sections } = Meridian;
 const chrome = sections.SiteChrome.variants;
 const heroes = sections.Hero.variants;
-
-export { globalTheme };
 
 export const pageBanners: Record<PageBannerKey, PageBanner> = {
   about: heroes.MeridianAboutHero1,

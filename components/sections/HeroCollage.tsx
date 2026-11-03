@@ -51,14 +51,14 @@ export function HeroCollage() {
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8, delay: 0.1 }}
-        className="absolute left-[42.8%] top-[0.8%] z-0 h-[50%] w-[15.9%] rounded-2xl bg-(color:--color-brand)"
+        className="absolute left-[42.8%] top-[0.8%] z-0 h-[50%] w-[15.9%] rounded-2xl bg-[#dc3a1f]"
       />
       <motion.span
         aria-hidden="true"
         initial={{ opacity: 0, x: 30 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.8, delay: 0.5 }}
-        className="absolute left-[87.4%] top-[43.6%] z-0 h-[18%] w-[11.3%] rounded-xl bg-(color:--color-slate2)"
+        className="absolute left-[87.4%] top-[43.6%] z-0 h-[18%] w-[11.3%] rounded-xl bg-[#1f4264]"
       />
 
       {PIECES.map((p) => (
@@ -77,7 +77,7 @@ export function HeroCollage() {
               ease: "easeInOut",
               delay: p.delay,
             }}
-            className="relative h-full w-full overflow-hidden rounded-[18px] border-[4px] border-white shadow-(--shadow-soft) sm:rounded-[22px] sm:border-[5px]"
+            className="relative h-full w-full overflow-hidden rounded-[18px] border-[4px] border-white shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] sm:rounded-[22px] sm:border-[5px]"
           >
             <Image
               src={p.src}

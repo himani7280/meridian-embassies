@@ -41,7 +41,7 @@ export default async function VisaPassportPage() {
                   direction={imageLeft ? "left" : "right"}
                   className={cn(imageLeft ? "lg:order-1" : "lg:order-2")}
                 >
-                  <div className="group relative aspect-[1.7/1] overflow-hidden rounded-md shadow-(--shadow-soft)">
+                  <div className="group relative aspect-[1.7/1] overflow-hidden rounded-md shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
                     <Image
                       src={s.image}
                       alt={s.alt}
@@ -58,16 +58,16 @@ export default async function VisaPassportPage() {
                     <Eyebrow>{s.eyebrow}</Eyebrow>
                   </Reveal>
                   <Reveal direction={imageLeft ? "right" : "left"} delay={0.1} className="mt-2.5">
-                    <h2 className="font-(family-name:--family-title) text-[2rem] font-extrabold leading-[1.12] tracking-tight text-(color:--color-navy) sm:text-4xl lg:text-[2.9rem]">
+                    <h2 className="font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-[#043468] sm:text-4xl lg:text-[2.9rem]">
                       {s.title}
                       <br />
                       {s.titleLine2 ? `${s.titleLine2} ` : null}
-                      <span className="text-(color:--color-brand)">{s.titleAccent}</span>
+                      <span className="text-[#dc3a1f]">{s.titleAccent}</span>
                       {s.titleEnd ? ` ${s.titleEnd}` : null}
                     </h2>
                   </Reveal>
                   <Reveal direction={imageLeft ? "right" : "left"} delay={0.2}>
-                    <p className="mt-3.5 max-w-[540px] text-base leading-7 text-(color:--color-mute) sm:leading-8">
+                    <p className="mt-3.5 max-w-[540px] text-base leading-7 text-[#6b7384] sm:leading-8">
                       {s.text}
                     </p>
                   </Reveal>

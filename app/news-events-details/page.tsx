@@ -54,19 +54,19 @@ export default async function BlogDetailsPage({
         <div className="mx-auto grid w-full max-w-[1320px] gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 lg:px-10">
           <article>
             <Reveal>
-              <time dateTime={new Date().toISOString()} className="text-[15px] text-(color:--color-mute)">
+              <time dateTime={new Date().toISOString()} className="text-[15px] text-[#6b7384]">
                 {currentDate()}
               </time>
-              <h1 className="mt-6 font-(family-name:--family-title) text-[2rem] font-extrabold leading-[1.12] tracking-tight text-(color:--color-navy) sm:text-4xl lg:text-[2.9rem]">
+              <h1 className="mt-6 font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-[#043468] sm:text-4xl lg:text-[2.9rem]">
                 {post.title}
                 <br />
-                <span className="text-(color:--color-brand)">{post.titleAccent}</span>
+                <span className="text-[#dc3a1f]">{post.titleAccent}</span>
               </h1>
-              <p className="mt-5 max-w-[760px] text-base leading-8 text-(color:--color-mute)">{post.excerpt}</p>
+              <p className="mt-5 max-w-[760px] text-base leading-8 text-[#6b7384]">{post.excerpt}</p>
             </Reveal>
 
             <Reveal delay={0.1} className="mt-8">
-              <div className="relative aspect-[825/563] overflow-hidden rounded-md shadow-(--shadow-soft)">
+              <div className="relative aspect-[825/563] overflow-hidden rounded-md shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
                 <Image
                   src={post.cover}
                   alt={`${post.title} ${post.titleAccent}`}
@@ -82,7 +82,7 @@ export default async function BlogDetailsPage({
               {post.sections.map((s) => (
                 <Reveal key={s.heading}>
                   {s.image ? (
-                    <div className="relative mb-8 aspect-[825/342] overflow-hidden rounded-md shadow-(--shadow-card)">
+                    <div className="relative mb-8 aspect-[825/342] overflow-hidden rounded-md shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
                       <Image
                         src={s.image}
                         alt={s.imageAlt ?? ""}
@@ -92,11 +92,11 @@ export default async function BlogDetailsPage({
                       />
                     </div>
                   ) : null}
-                  <h2 className="flex items-center gap-3 font-(family-name:--family-title) text-2xl font-bold text-(color:--color-navy)">
-                    <span className="h-[3px] w-7 shrink-0 bg-(color:--color-brand)" />
+                  <h2 className="flex items-center gap-3 font-[family-name:Manrope,system-ui,sans-serif] text-2xl font-bold text-[#043468]">
+                    <span className="h-[3px] w-7 shrink-0 bg-[#dc3a1f]" />
                     {s.heading}
                   </h2>
-                  <p className="mt-6 text-base leading-8 text-(color:--color-mute)">{s.body}</p>
+                  <p className="mt-6 text-base leading-8 text-[#6b7384]">{s.body}</p>
                 </Reveal>
               ))}
             </div>
@@ -104,20 +104,20 @@ export default async function BlogDetailsPage({
 
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <Reveal direction="left">
-              <span className="block h-[3px] w-7 bg-(color:--color-brand)" />
-              <h2 className="mt-6 font-(family-name:--family-title) text-3xl font-extrabold text-(color:--color-navy)">
-                Recent <span className="text-(color:--color-brand)">News</span>
+              <span className="block h-[3px] w-7 bg-[#dc3a1f]" />
+              <h2 className="mt-6 font-[family-name:Manrope,system-ui,sans-serif] text-3xl font-extrabold text-[#043468]">
+                Recent <span className="text-[#dc3a1f]">News</span>
               </h2>
             </Reveal>
 
-            <Stagger className="mt-6 divide-y divide-(color:--color-navy)/10" stagger={0.1}>
+            <Stagger className="mt-6 divide-y divide-[#043468]/10" stagger={0.1}>
               {all.map((p) => (
                 <StaggerItem key={p.id}>
                   <Link
                     href={`/news-events-details?slug=${p.slug}`}
                     className="group flex items-center gap-4 py-4 first:pt-0"
                   >
-                    <span className="relative block h-[88px] w-[104px] shrink-0 overflow-hidden rounded-md shadow-(--shadow-card)">
+                    <span className="relative block h-[88px] w-[104px] shrink-0 overflow-hidden rounded-md shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
                       <Image
                         src={p.image}
                         alt=""
@@ -127,14 +127,14 @@ export default async function BlogDetailsPage({
                       />
                     </span>
                     <span>
-                      <time dateTime={new Date().toISOString()} className="block text-[13px] text-(color:--color-mute)">
+                      <time dateTime={new Date().toISOString()} className="block text-[13px] text-[#6b7384]">
                         {currentDate()}
                       </time>
                       <span
                         className={
                           p.id === post.id
-                            ? "mt-1 block font-(family-name:--family-title) text-[1.02rem] font-bold leading-snug text-(color:--color-brand)"
-                            : "mt-1 block font-(family-name:--family-title) text-[1.02rem] font-bold leading-snug text-(color:--color-navy) transition-colors group-hover:text-(color:--color-brand)"
+                            ? "mt-1 block font-[family-name:Manrope,system-ui,sans-serif] text-[1.02rem] font-bold leading-snug text-[#dc3a1f]"
+                            : "mt-1 block font-[family-name:Manrope,system-ui,sans-serif] text-[1.02rem] font-bold leading-snug text-[#043468] transition-colors group-hover:text-[#dc3a1f]"
                         }
                       >
                         {p.title} {p.titleAccent}

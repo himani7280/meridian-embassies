@@ -35,7 +35,7 @@ export function Testimonials({ intro, items }: Props) {
 
   return (
     <section className="relative overflow-hidden pt-6 pb-6 mt-6 mb-6">
-      <PlaneTrail className="absolute left-0 top-24 hidden h-[110px] w-[190px] text-(color:--color-navy)/10 lg:block" />
+      <PlaneTrail className="absolute left-0 top-24 hidden h-[110px] w-[190px] text-[#043468]/10 lg:block" />
 
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
         <SectionHeading
@@ -49,7 +49,7 @@ export function Testimonials({ intro, items }: Props) {
 
         <div className="mt-10 grid items-start gap-8 lg:mt-14 lg:grid-cols-[1fr_1.02fr] lg:gap-8">
           <Reveal direction="left">
-            <div className="group relative aspect-[580/510] overflow-hidden rounded-xl shadow-(--shadow-soft)">
+            <div className="group relative aspect-[580/510] overflow-hidden rounded-xl shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
               <Image
                 src="/img/testimonial.webp"
                 alt="Happy client at the airport with her passport"
@@ -62,7 +62,7 @@ export function Testimonials({ intro, items }: Props) {
 
           <Reveal direction="right" delay={0.1}>
             <div className="relative">
-              <div className="relative min-h-[210px] rounded-b-lg rounded-t-sm bg-[#003468] p-6 text-white shadow-(--shadow-soft) sm:p-8">
+              <div className="relative min-h-[210px] rounded-b-lg rounded-t-sm bg-[#003468] p-6 text-white shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] sm:p-8">
                 <AnimatePresence mode="wait">
                   <motion.div
                     key={current.id}
@@ -98,7 +98,7 @@ export function Testimonials({ intro, items }: Props) {
                     whileHover={{ scale: 1.06 }}
                     whileTap={{ scale: 0.96 }}
                     aria-label={`Show testimonial from ${item.name}`}
-                    className="relative h-[70px] w-20 overflow-hidden rounded-md bg-(color:--color-navy-100) ring-2 ring-transparent transition-shadow hover:ring-(color:--color-brand)"
+                    className="relative h-[70px] w-20 overflow-hidden rounded-md bg-[#e7eff9] ring-2 ring-transparent transition-shadow hover:ring-[#dc3a1f]"
                   >
                     <Image
                       src={item.avatar}
@@ -120,7 +120,7 @@ export function Testimonials({ intro, items }: Props) {
                   transition={{ duration: 0.35 }}
                   className="flex items-center gap-4"
                 >
-                  <span className="relative h-[84px] w-[84px] shrink-0 overflow-hidden rounded-full bg-(color:--color-navy-100) shadow-(--shadow-card)">
+                  <span className="relative h-[84px] w-[84px] shrink-0 overflow-hidden rounded-full bg-[#e7eff9] shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
                     <Image
                       src={current.avatar}
                       alt={current.name}
@@ -130,10 +130,10 @@ export function Testimonials({ intro, items }: Props) {
                     />
                   </span>
                   <span>
-                    <span className="block font-(family-name:--family-title) text-xl font-bold text-(color:--color-navy)">
+                    <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold text-[#043468]">
                       {current.name}
                     </span>
-                    <span className="block text-[15px] text-(color:--color-mute)">{current.role}</span>
+                    <span className="block text-[15px] text-[#6b7384]">{current.role}</span>
                   </span>
                 </motion.div>
               </AnimatePresence>
