@@ -53,12 +53,12 @@ export function ProcessSteps({ intro, steps }: Props) {
                   className={cn(reverse && "lg:order-1")}
                 >
                   <div className="flex items-center gap-4 sm:gap-6 lg:px-12 xl:px-16">
-                    <span className="font-[family-name:Manrope,system-ui,sans-serif] text-4xl font-extrabold text-[#dc3a1f] sm:text-5xl">
+                    <span className="font-(family-name:--family-title) text-4xl font-extrabold text-[#dc3a1f] sm:text-5xl">
                       {step.number}
                     </span>
                     <span className="h-16 w-px shrink-0 bg-[#043468]/20 sm:h-20" />
                     <div>
-                      <h3 className="font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold leading-snug text-[#043468] sm:text-2xl">
+                      <h3 className="font-(family-name:--family-title) text-lg font-bold leading-snug text-[#043468] sm:text-2xl">
                         {step.title}
                       </h3>
                       <p className="mt-2 max-w-[420px] text-[15px] leading-7 text-[#6b7384] sm:text-base">

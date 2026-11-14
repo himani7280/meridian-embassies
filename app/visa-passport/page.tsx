@@ -58,7 +58,7 @@ export default async function VisaPassportPage() {
                     <Eyebrow>{s.eyebrow}</Eyebrow>
                   </Reveal>
                   <Reveal direction={imageLeft ? "right" : "left"} delay={0.1} className="mt-2.5">
-                    <h2 className="font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-[#043468] sm:text-4xl lg:text-[2.9rem]">
+                    <h2 className="font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight text-[#043468] sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]">
                       {s.title}
                       <br />
                       {s.titleLine2 ? `${s.titleLine2} ` : null}

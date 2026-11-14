@@ -23,6 +23,7 @@ export default async function ContactPage() {
       value: contact.phone,
       href: contact.phoneHref,
       note: undefined,
+      filled: true,
     },
     {
       icon: Mail,
@@ -30,6 +31,7 @@ export default async function ContactPage() {
       value: contact.email,
       href: `mailto:${contact.email}`,
       note: contact.replyTime,
+      filled: false,
     },
     {
       icon: MapPin,
@@ -37,6 +39,7 @@ export default async function ContactPage() {
       value: contact.officeAddress,
       href: contact.mapLink,
       note: undefined,
+      filled: false,
     },
   ];
 
@@ -57,20 +60,24 @@ export default async function ContactPage() {
 
           <Stagger className="divide-y divide-[#043468]/10" stagger={0.12}>
             {rows.map((r) => (
-              <StaggerItem key={r.label}>
+              <StaggerItem key={r.label} className="py-3.5 first:pt-0 last:pb-0">
                 <a
                   href={r.href}
                   {...(r.label === "Our Location"
                     ? { target: "_blank", rel: "noopener noreferrer" }
                     : {})}
-                  className="group flex items-center gap-5 py-5 first:pt-0 last:pb-0"
+                  className="group flex items-center gap-5"
                 >
-                  <span className="grid h-[68px] w-[68px] shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f] transition-all duration-300 group-hover:bg-[#dc3a1f] group-hover:text-white sm:h-[74px] sm:w-[74px]">
-                    <r.icon className="h-7 w-7" fill="currentColor" strokeWidth={1.5} />
+                  <span className="grid h-[68px] w-[68px] shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:bg-[#dc3a1f] group-hover:text-white sm:h-[74px] sm:w-[74px]">
+                    {r.filled ? (
+                      <r.icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" fill="currentColor" strokeWidth={1.5} />
+                    ) : (
+                      <r.icon className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />
+                    )}
                   </span>
                   <span className="min-w-0">
                     <span className="block text-[15px] text-[#6b7384]">{r.label}</span>
-                    <span className="block break-words font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.5rem]">
+                    <span className="block break-words font-(family-name:--family-title) text-xl font-bold text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.5rem]">
                       {r.value}
                     </span>
                     {r.note ? (
@@ -126,13 +133,13 @@ export default async function ContactPage() {
               textClassName="max-w-[460px] text-lg"
             />
             <Reveal delay={0.2} className="mt-7">
-              <div className="flex items-center gap-5 bg-[#f1f5fa] p-5 sm:p-6">
-                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f]">
-                  <MapPin className="h-7 w-7" fill="currentColor" strokeWidth={1.5} />
+              <div className="group flex items-center gap-5 bg-[#f1f5fa] p-5 sm:p-6">
+                <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:bg-[#dc3a1f] group-hover:text-white">
+                  <MapPin className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />
                 </span>
                 <address className="not-italic">
                   <span className="block text-[15px] text-[#6b7384]">Address</span>
-                  <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-lg font-bold leading-snug text-[#043468] sm:text-xl">
+                  <span className="block font-(family-name:--family-title) text-lg font-bold leading-snug text-[#043468] sm:text-xl">
                     {contact.officeAddress}
                   </span>
                 </address>

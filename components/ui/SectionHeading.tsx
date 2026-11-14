@@ -60,7 +60,7 @@ export function GradientTitle({
   return (
     <Tag
       className={cn(
-        "font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight sm:text-4xl lg:text-[2.9rem]",
+        "font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]",
         light ? "text-white" : "text-[#043468]",
         className,
       )}

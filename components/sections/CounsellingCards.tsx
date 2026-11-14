@@ -37,16 +37,16 @@ export function CounsellingCards({ data }: { data: ServicesData["counselling"] }
           stagger={0.1}
         >
           {data.items.map((item) => (
-            <StaggerItem key={item.id}>
+            <StaggerItem key={item.id} className="h-full">
               <Link
                 href={item.href}
                 className={cn(
                   "group flex h-full flex-col overflow-hidden bg-[#f3f5f9] transition-all duration-300",
-                  "hover:-translate-y-1 hover:shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:min-h-[190px]",
+                  "hover:-translate-y-1 hover:shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:min-h-[196px]",
                   item.side === "right" ? "sm:flex-row-reverse" : "sm:flex-row",
                 )}
               >
-                <span className="relative block h-48 w-full shrink-0 overflow-hidden sm:h-auto sm:w-[43%]">
+                <span className="relative block h-48 w-full shrink-0 overflow-hidden sm:h-auto sm:w-[39%]">
                   <Image
                     src={item.image}
                     alt={item.title}
@@ -55,18 +55,18 @@ export function CounsellingCards({ data }: { data: ServicesData["counselling"] }
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                 </span>
-                <span className="flex flex-1 items-center gap-4 p-5 sm:p-6">
-                  <span className="grid h-14 w-14 shrink-0 place-items-center rounded-xl bg-[#e7eff9] text-[#043468] transition-colors duration-300 group-hover:bg-[#043468] group-hover:text-white sm:h-[60px] sm:w-[60px]">
-                    <Icon name={item.icon} className="h-7 w-7" strokeWidth={1.5} />
+                <span className="flex flex-1 items-center gap-3.5 p-5 xl:gap-4 xl:p-6">
+                  <span className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-[#e7eff9] text-[#043468] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#043468] group-hover:text-white sm:h-14 sm:w-14 xl:h-[60px] xl:w-[60px]">
+                    <Icon name={item.icon} className="h-6 w-6 transition-transform duration-300 group-hover:scale-110 sm:h-7 sm:w-7" strokeWidth={1.5} />
                   </span>
-                  <span className="min-w-0">
-                    <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-lg font-bold text-[#043468]">
+                  <span className="flex min-w-0 flex-1 flex-col self-stretch">
+                    <span className="block font-(family-name:--family-title) text-base font-bold leading-snug text-[#043468] lg:text-[15px] xl:text-[17px]">
                       {item.title}
                     </span>
                     <span className="mt-1.5 block text-sm leading-6 text-[#6b7384]">
                       {item.text}
                     </span>
-                    <span className="mt-3 inline-flex items-center gap-2 border-b border-[#043468]/60 pb-0.5 text-[13px] font-semibold text-[#043468]">
+                    <span className="mt-auto pt-3 inline-flex self-start items-center gap-2 border-b border-[#043468]/60 pb-0.5 text-[13px] font-semibold text-[#043468]">
                       Learn More
                       <ArrowRight
                         className="h-4 w-4 text-[#dc3a1f] transition-transform duration-300 group-hover:translate-x-1"

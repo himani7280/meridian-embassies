@@ -37,7 +37,7 @@ export function Footer({ site }: { site: SiteData }) {
               alt="The Meridian - Embassies & Consulates"
               width={1853}
               height={462}
-              className="h-14 w-auto sm:h-16"
+              className="h-10 w-auto sm:h-14 lg:h-16"
             />
           </Link>
           <p className="mt-8 max-w-[300px] text-[15px] leading-7 text-white/70">
@@ -53,9 +53,9 @@ export function Footer({ site }: { site: SiteData }) {
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label={s.name}
-                    className="grid h-11 w-11 place-items-center rounded-full border border-white/35 text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#dc3a1f] hover:bg-[#dc3a1f]"
+                    className="group grid h-11 w-11 place-items-center rounded-full border border-white/35 text-white transition-all duration-300 hover:-translate-y-1 hover:border-[#dc3a1f] hover:bg-[#dc3a1f]"
                   >
-                    <Cmp className="h-[18px] w-[18px]" />
+                    <Cmp className="h-[18px] w-[18px] transition-transform duration-300 group-hover:scale-110" />
                   </a>
                 </li>
               );
@@ -64,7 +64,7 @@ export function Footer({ site }: { site: SiteData }) {
         </Reveal>
 
         <Reveal delay={0.1} className="lg:border-l lg:border-white/15 lg:px-14">
-          <h3 className="font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold text-white">Quick Links</h3>
+          <h3 className="font-(family-name:--family-title) text-xl font-bold text-white">Quick Links</h3>
           <ul className="mt-5 space-y-3">
             {site.quickLinks.map((l) => {
               const active = isActive(l.href);
@@ -87,19 +87,19 @@ export function Footer({ site }: { site: SiteData }) {
         </Reveal>
 
         <Reveal delay={0.2} className="lg:border-l lg:border-white/15 lg:pl-14">
-          <h3 className="font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold text-white">Get in Touch</h3>
+          <h3 className="font-(family-name:--family-title) text-xl font-bold text-white">Get in Touch</h3>
           <ul className="mt-5 space-y-5">
-            <li className="flex items-center gap-4">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#e8603f] text-white">
-                <Phone className="h-[18px] w-[18px]" fill="currentColor" strokeWidth={1.5} />
+            <li className="group flex items-center gap-4">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#e8603f] text-white transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:bg-[#dc3a1f]">
+                <Phone className="h-[18px] w-[18px] transition-transform duration-300 group-hover:scale-110" fill="currentColor" strokeWidth={1.5} />
               </span>
               <a href={site.contact.phoneHref} className="text-[15px] text-white hover:underline">
                 {site.contact.phone}
               </a>
             </li>
-            <li className="flex items-center gap-4">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#e8603f] text-white">
-                <Mail className="h-[18px] w-[18px]" strokeWidth={2} />
+            <li className="group flex items-center gap-4">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#e8603f] text-white transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:bg-[#dc3a1f]">
+                <Mail className="h-[18px] w-[18px] transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />
               </span>
               <a
                 href={`mailto:${site.contact.email}`}
@@ -108,9 +108,9 @@ export function Footer({ site }: { site: SiteData }) {
                 {site.contact.email}
               </a>
             </li>
-            <li className="flex items-start gap-4">
-              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#e8603f] text-white">
-                <MapPin className="h-[18px] w-[18px]" fill="currentColor" strokeWidth={1.5} />
+            <li className="group flex items-start gap-4">
+              <span className="grid h-10 w-10 shrink-0 place-items-center rounded-full bg-[#e8603f] text-white transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-110 group-hover:bg-[#dc3a1f]">
+                <MapPin className="h-[18px] w-[18px] transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />
               </span>
               <address className="max-w-[280px] pt-0.5 text-[15px] not-italic leading-7 text-white">
                 {site.contact.address}

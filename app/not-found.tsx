@@ -5,8 +5,8 @@ export default function NotFound() {
   return (
     <section className="grid min-h-[60vh] place-items-center px-4 py-20 text-center">
       <div>
-        <p className="font-[family-name:Manrope,system-ui,sans-serif] text-7xl font-extrabold text-[#dc3a1f] sm:text-8xl">404</p>
-        <h1 className="mt-4 font-[family-name:Manrope,system-ui,sans-serif] text-3xl font-extrabold text-[#043468] sm:text-4xl">
+        <p className="font-(family-name:--family-title) text-7xl font-extrabold text-[#dc3a1f] sm:text-8xl">404</p>
+        <h1 className="mt-4 font-(family-name:--family-title) text-3xl font-extrabold text-[#043468] sm:text-4xl">
           This page took a different flight
         </h1>
         <p className="mx-auto mt-3 max-w-md text-[#6b7384]">

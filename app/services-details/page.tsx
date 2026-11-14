@@ -51,11 +51,11 @@ export default async function ServicesDetailsPage() {
               delay={0.2}
             >
               {d.about.features.map((f) => (
-                <StaggerItem key={f.label} className="text-center">
-                  <span className="mx-auto grid h-[72px] w-[72px] place-items-center rounded-full bg-[#e7eff9] text-[#043468] transition-all duration-300 hover:-translate-y-1 hover:bg-[#043468] hover:text-white">
-                    <Icon name={f.icon} className="h-8 w-8" strokeWidth={1.4} />
+                <StaggerItem key={f.label} className="group text-center">
+                  <span className="mx-auto grid h-[72px] w-[72px] place-items-center rounded-full bg-[#e7eff9] text-[#043468] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:bg-[#043468] group-hover:text-white">
+                    <Icon name={f.icon} className="h-8 w-8 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.4} />
                   </span>
-                  <span className="mt-6 block text-[13px] font-semibold leading-5 text-[#043468]">
+                  <span className="mx-auto mt-6 block max-w-[110px] text-[13px] font-semibold leading-5 text-[#043468] transition-colors duration-300 group-hover:text-[#dc3a1f]">
                     {f.label}
                   </span>
                 </StaggerItem>
@@ -86,7 +86,7 @@ export default async function ServicesDetailsPage() {
                     <Icon name={b.icon} className="h-12 w-12 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.4} />
                     <span className="absolute -right-1 -top-1 h-3 w-3 rounded-full bg-[#dc3a1f]" />
                   </span>
-                  <h3 className="mt-4 font-[family-name:Manrope,system-ui,sans-serif] text-lg font-bold text-[#043468]">{b.title}</h3>
+                  <h3 className="mt-4 font-(family-name:--family-title) text-lg font-bold text-[#043468]">{b.title}</h3>
                   <p className="mt-2 text-sm leading-6 text-[#6b7384]">{b.text}</p>
                 </div>
               </StaggerItem>
@@ -113,17 +113,17 @@ export default async function ServicesDetailsPage() {
               className="absolute left-8 right-8 top-8 hidden h-px bg-[#043468]/15 lg:block"
             />
             {d.process.steps.map((s) => (
-              <StaggerItem key={s.number} className="relative">
-                <span className="relative z-10 grid h-16 w-16 place-items-center rounded-full bg-[#e3ecf8] text-[#043468]">
-                  <Icon name={s.icon} className="h-7 w-7" strokeWidth={1.6} />
+              <StaggerItem key={s.number} className="group relative flex h-full flex-col">
+                <span className="relative z-10 grid h-16 w-16 place-items-center rounded-full bg-[#e3ecf8] text-[#043468] transition-all duration-300 group-hover:-translate-y-1 group-hover:scale-105 group-hover:bg-[#043468] group-hover:text-white">
+                  <Icon name={s.icon} className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" strokeWidth={1.6} />
                   <span className="absolute -bottom-0.5 -right-0.5 h-4 w-4 rounded-full border-2 border-white bg-[#dc3a1f]" />
                 </span>
-                <p className="mt-5 font-[family-name:Manrope,system-ui,sans-serif] text-4xl font-extrabold text-[#dc3a1f]">{s.number}</p>
-                <h3 className="mt-1 font-[family-name:Manrope,system-ui,sans-serif] text-lg font-bold leading-snug text-[#043468]">
+                <p className="mt-5 font-(family-name:--family-title) text-4xl font-extrabold text-[#dc3a1f]">{s.number}</p>
+                <h3 className="mt-1 font-(family-name:--family-title) text-base font-bold leading-snug text-[#043468] sm:text-lg">
                   {s.title}
                 </h3>
-                <p className="mt-2 max-w-[250px] text-sm leading-6 text-[#6b7384]">{s.text}</p>
-                <ArrowRight className="mt-6 h-5 w-5 text-[#dc3a1f]" strokeWidth={2} />
+                <p className="mt-2 mb-6 max-w-[250px] text-sm leading-6 text-[#6b7384]">{s.text}</p>
+                <ArrowRight className="mt-auto h-5 w-5 text-[#dc3a1f] transition-transform duration-300 group-hover:translate-x-1.5" strokeWidth={2} />
               </StaggerItem>
             ))}
           </Stagger>
@@ -146,8 +146,8 @@ export default async function ServicesDetailsPage() {
             </Reveal>
             <Stagger className="mt-6 space-y-3.5" stagger={0.1} delay={0.2}>
               {d.audience.points.map((p) => (
-                <StaggerItem key={p} className="flex items-start gap-3">
-                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#dc3a1f] text-white">
+                <StaggerItem key={p} className="group flex items-start gap-3">
+                  <span className="mt-0.5 grid h-6 w-6 shrink-0 place-items-center rounded-full bg-[#dc3a1f] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#043468]">
                     <Check className="h-3.5 w-3.5" strokeWidth={3} />
                   </span>
                   <span className="text-[15px] leading-6 text-[#071f37]/85">{p}</span>
@@ -192,7 +192,7 @@ export default async function ServicesDetailsPage() {
               <Eyebrow light>{d.cta.eyebrow}</Eyebrow>
             </Reveal>
             <Reveal delay={0.08} className="mt-4">
-              <h2 className="font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-white sm:text-4xl lg:text-[2.9rem]">
+              <h2 className="font-(family-name:--family-title) text-[1.3rem] font-extrabold leading-[1.18] tracking-tight text-white sm:text-4xl lg:text-[2.9rem]">
                 {d.cta.title}
                 <br />
                 {d.cta.titleLine2} <span className="text-[#e8603f]">{d.cta.titleAccent}</span>

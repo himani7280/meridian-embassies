@@ -49,11 +49,11 @@ export function HomeServices({ intro, items }: Props) {
                   href={s.href}
                   className="group flex items-center gap-4 py-5 transition-transform duration-300 hover:translate-x-1.5 sm:gap-5"
                 >
-                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#043468] transition-colors duration-300 group-hover:bg-[#043468] group-hover:text-white sm:h-[78px] sm:w-[78px]">
-                    <Icon name={s.icon} className="h-7 w-7 sm:h-9 sm:w-9" strokeWidth={1.4} />
+                  <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#043468] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#043468] group-hover:text-white sm:h-[78px] sm:w-[78px]">
+                    <Icon name={s.icon} className="h-7 w-7 transition-transform duration-300 group-hover:scale-110 sm:h-9 sm:w-9" strokeWidth={1.4} />
                   </span>
                   <span className="min-w-0 flex-1">
-                    <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-[1.05rem] font-bold leading-snug text-[#043468] sm:text-[1.2rem]">
+                    <span className="block font-(family-name:--family-title) text-[0.95rem] font-bold leading-snug text-[#043468] transition-colors duration-300 group-hover:text-[#dc3a1f] sm:text-[1.2rem]">
                       {s.title}
                     </span>
                     <span className="mt-1 block text-sm leading-6 text-[#6b7384] sm:text-[15px]">
@@ -61,8 +61,8 @@ export function HomeServices({ intro, items }: Props) {
                     </span>
                   </span>
                   <span className="hidden h-12 w-px bg-[#043468]/15 sm:block" />
-                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-[1.5px] border-[#dc3a1f] text-[#dc3a1f] transition-all duration-300 group-hover:bg-[#dc3a1f] group-hover:text-white sm:h-12 sm:w-12">
-                    <ArrowRight className="h-5 w-5" strokeWidth={2} />
+                  <span className="grid h-11 w-11 shrink-0 place-items-center rounded-full border-[1.5px] border-[#dc3a1f] text-[#dc3a1f] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#dc3a1f] group-hover:text-white sm:h-12 sm:w-12">
+                    <ArrowRight className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-0.5" strokeWidth={2} />
                   </span>
                 </Link>
               </StaggerItem>

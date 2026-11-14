@@ -16,7 +16,7 @@ export function Hero({ data }: { data: HomeData["hero"] }) {
             <span className="mb-6 block h-[2px] w-12 bg-[#dc3a1f]" />
           </Reveal>
           <Reveal direction="left" delay={0.1}>
-            <h1 className="font-[family-name:Manrope,system-ui,sans-serif] text-[2.4rem] font-extrabold leading-[1.08] tracking-tight text-[#1f4264] sm:text-5xl lg:text-[3.4rem] xl:text-[4rem]">
+            <h1 className="font-(family-name:--family-title) text-[1.85rem] font-extrabold leading-[1.12] tracking-tight text-[#1f4264] sm:text-5xl sm:leading-[1.08] lg:text-[3.4rem] xl:text-[4rem]">
               {data.titleLine1}
               <span className="block text-[#dc3a1f]">{data.titleAccent}</span>
             </h1>

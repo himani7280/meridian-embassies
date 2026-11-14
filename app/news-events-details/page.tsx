@@ -57,7 +57,7 @@ export default async function BlogDetailsPage({
               <time dateTime={new Date().toISOString()} className="text-[15px] text-[#6b7384]">
                 {currentDate()}
               </time>
-              <h1 className="mt-6 font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-[#043468] sm:text-4xl lg:text-[2.9rem]">
+              <h1 className="mt-6 font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight text-[#043468] sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]">
                 {post.title}
                 <br />
                 <span className="text-[#dc3a1f]">{post.titleAccent}</span>
@@ -92,7 +92,7 @@ export default async function BlogDetailsPage({
                       />
                     </div>
                   ) : null}
-                  <h2 className="flex items-center gap-3 font-[family-name:Manrope,system-ui,sans-serif] text-2xl font-bold text-[#043468]">
+                  <h2 className="flex items-center gap-3 font-(family-name:--family-title) text-2xl font-bold text-[#043468]">
                     <span className="h-[3px] w-7 shrink-0 bg-[#dc3a1f]" />
                     {s.heading}
                   </h2>
@@ -105,7 +105,7 @@ export default async function BlogDetailsPage({
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <Reveal direction="left">
               <span className="block h-[3px] w-7 bg-[#dc3a1f]" />
-              <h2 className="mt-6 font-[family-name:Manrope,system-ui,sans-serif] text-3xl font-extrabold text-[#043468]">
+              <h2 className="mt-6 font-(family-name:--family-title) text-3xl font-extrabold text-[#043468]">
                 Recent <span className="text-[#dc3a1f]">News</span>
               </h2>
             </Reveal>
@@ -133,8 +133,8 @@ export default async function BlogDetailsPage({
                       <span
                         className={
                           p.id === post.id
-                            ? "mt-1 block font-[family-name:Manrope,system-ui,sans-serif] text-[1.02rem] font-bold leading-snug text-[#dc3a1f]"
-                            : "mt-1 block font-[family-name:Manrope,system-ui,sans-serif] text-[1.02rem] font-bold leading-snug text-[#043468] transition-colors group-hover:text-[#dc3a1f]"
+                            ? "mt-1 block font-(family-name:--family-title) text-[1.02rem] font-bold leading-snug text-[#dc3a1f]"
+                            : "mt-1 block font-(family-name:--family-title) text-[1.02rem] font-bold leading-snug text-[#043468] transition-colors group-hover:text-[#dc3a1f]"
                         }
                       >
                         {p.title} {p.titleAccent}

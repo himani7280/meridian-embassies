@@ -42,7 +42,7 @@ export function AboutSection({ data }: { data: HomeData["about"] }) {
               <span className="h-10 w-[2px] bg-[#043468]" />
               <div className="flex w-full items-center gap-5">
                 <span className="h-px flex-1 bg-[#043468]/15" />
-                <span className="font-[family-name:Manrope,system-ui,sans-serif] text-5xl font-extrabold text-[#043468]">
+                <span className="font-(family-name:--family-title) text-5xl font-extrabold text-[#043468]">
                   <CountUp to={data.statValue} suffix={data.statSuffix} />
                 </span>
                 <span className="h-px flex-1 bg-[#043468]/15" />

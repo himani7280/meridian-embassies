@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
+import type { CSSProperties } from "react";
 import "./globals.css";
-import { getSite } from "@/data/siteData";
+import { fonts, getSite } from "@/data/siteData";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Providers } from "@/components/motion/Providers";
@@ -29,8 +30,10 @@ export const viewport: Viewport = {
   initialScale: 1,
 };
 
-const fontsStylesheet =
-  "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap";
+const fontVariables = {
+  "--family-title": fonts["--family-title"],
+  "--family-body": fonts["--family-body"],
+} as CSSProperties;
 
 export default async function RootLayout({
   children,
@@ -40,13 +43,13 @@ export default async function RootLayout({
   const site = await getSite();
 
   return (
-    <html lang="en">
+    <html lang="en" style={fontVariables}>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="stylesheet" href={fontsStylesheet} />
+        <link rel="stylesheet" href={fonts.stylesheet} />
       </head>
-      <body className="overflow-x-hidden bg-white font-[family-name:Inter,system-ui,sans-serif] text-[15px] leading-[1.625] text-[#071f37] antialiased selection:bg-[#dc3a1f] selection:text-white [&_*:focus-visible]:outline-2 [&_*:focus-visible]:outline-offset-2 [&_*:focus-visible]:outline-[#dc3a1f] [&_img]:[-webkit-user-drag:none]">
+      <body className="overflow-x-hidden bg-white font-(family-name:--family-body) text-[15px] leading-[1.625] text-[#071f37] antialiased selection:bg-[#dc3a1f] selection:text-white [&_*:focus-visible]:outline-2 [&_*:focus-visible]:outline-offset-2 [&_*:focus-visible]:outline-[#dc3a1f] [&_img]:[-webkit-user-drag:none]">
         <Providers>
           <div className="mx-auto w-full max-w-[1350px] overflow-x-clip bg-white">
             <Header nav={site.nav} cta={site.cta} />

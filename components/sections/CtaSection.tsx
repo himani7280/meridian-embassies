@@ -15,7 +15,7 @@ export function CtaSection({ data, contact }: Props) {
     <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#f3f7fc] via-white to-[#fff4f1] pt-6 pb-6 mt-6 mb-6 shadow-[0_8px_40px_-8px_rgba(4,52,104,0.22)]">
       <span
         aria-hidden="true"
-        className="pointer-events-none absolute -left-2 top-2 select-none font-[family-name:Manrope,system-ui,sans-serif] text-[7rem] font-extrabold leading-none tracking-tight text-[#043468]/[0.045] sm:left-[3%] sm:text-[12rem] lg:top-0 lg:text-[18rem]"
+        className="pointer-events-none absolute -left-2 top-2 select-none font-(family-name:--family-title) text-[7rem] font-extrabold leading-none tracking-tight text-[#043468]/[0.045] sm:left-[3%] sm:text-[12rem] lg:top-0 lg:text-[18rem]"
       >
         {data.watermark}
       </span>
@@ -32,11 +32,11 @@ export function CtaSection({ data, contact }: Props) {
         <div className="grid items-center gap-10 lg:grid-cols-12">
           <div className="lg:col-span-8">
             <Reveal direction="left">
-              <h2 className="font-[family-name:Manrope,system-ui,sans-serif] text-[2rem] font-extrabold leading-[1.12] tracking-tight text-[#043468] sm:text-4xl lg:text-[2.9rem]">
+              <h2 className="font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight text-[#043468] sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]">
                 {data.titleLine1}
                 <br />
                 <span className="text-[#dc3a1f]">{data.titleAccent}</span>
-                <span className="relative mx-2 inline-block h-12 w-12 -translate-y-1 overflow-hidden rounded-full border-4 border-white align-middle shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:mx-3 sm:h-[84px] sm:w-[84px]">
+                <span className="relative mx-1.5 inline-block h-9 w-9 -translate-y-0.5 overflow-hidden rounded-full border-2 border-white align-middle shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:mx-3 sm:h-[84px] sm:w-[84px] sm:-translate-y-1 sm:border-4">
                   <Image
                     src="/img/cta-woman.webp"
                     alt=""
@@ -82,10 +82,10 @@ export function CtaSection({ data, contact }: Props) {
               href={contact.ctaPhoneHref}
               className="group mt-2 inline-flex items-center gap-3"
             >
-              <RingPulse className="grid h-11 w-11 place-items-center rounded-full bg-[#dc3a1f] text-white">
-                <Phone className="h-5 w-5" fill="currentColor" strokeWidth={1.5} />
+              <RingPulse className="grid h-11 w-11 place-items-center rounded-full bg-[#dc3a1f] text-white transition-all duration-300 group-hover:scale-110 group-hover:bg-[#043468]">
+                <Phone className="h-5 w-5 transition-transform duration-300 group-hover:rotate-12" fill="currentColor" strokeWidth={1.5} />
               </RingPulse>
-              <span className="font-[family-name:Manrope,system-ui,sans-serif] text-2xl font-extrabold text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.9rem]">
+              <span className="font-(family-name:--family-title) text-2xl font-extrabold text-[#043468] transition-colors group-hover:text-[#dc3a1f] sm:text-[1.9rem]">
                 {contact.ctaPhone}
               </span>
             </a>

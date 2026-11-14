@@ -15,7 +15,7 @@ export default function ThankYouPage() {
           <CheckCircle2 className="h-10 w-10 text-emerald-600" strokeWidth={1.5} />
         </span>
 
-        <h1 className="font-[family-name:Manrope,system-ui,sans-serif] text-4xl font-extrabold tracking-tight text-[#043468] sm:text-5xl">
+        <h1 className="font-(family-name:--family-title) text-4xl font-extrabold tracking-tight text-[#043468] sm:text-5xl">
           Thank You!
         </h1>
         <p className="mt-4 text-lg leading-7 text-[#6b7384]">

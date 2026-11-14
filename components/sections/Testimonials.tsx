@@ -130,7 +130,7 @@ export function Testimonials({ intro, items }: Props) {
                     />
                   </span>
                   <span>
-                    <span className="block font-[family-name:Manrope,system-ui,sans-serif] text-xl font-bold text-[#043468]">
+                    <span className="block font-(family-name:--family-title) text-xl font-bold text-[#043468]">
                       {current.name}
                     </span>
                     <span className="block text-[15px] text-[#6b7384]">{current.role}</span>

@@ -37,7 +37,7 @@ export function PageBanner({ title, crumb }: PageBannerProps) {
           initial={{ opacity: 0, x: -34 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          className="font-[family-name:Manrope,system-ui,sans-serif] text-3xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.6rem]"
+          className="font-(family-name:--family-title) text-2xl font-bold tracking-tight text-white sm:text-4xl lg:text-[2.6rem]"
         >
           {title}
         </motion.h1>
