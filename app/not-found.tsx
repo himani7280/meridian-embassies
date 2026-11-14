@@ -3,7 +3,7 @@ import { ButtonLink } from "@/components/ui/ButtonLink";
 
 export default function NotFound() {
   return (
-    <section className="grid min-h-[60vh] place-items-center px-4 py-20 text-center">
+    <section className="grid min-h-[60vh] place-items-center px-4 py-10 text-center sm:py-14 lg:py-20">
       <div>
         <p className="font-(family-name:--family-title) text-7xl font-extrabold text-[#dc3a1f] sm:text-8xl">404</p>
         <h1 className="mt-4 font-(family-name:--family-title) text-3xl font-extrabold text-[#043468] sm:text-4xl">

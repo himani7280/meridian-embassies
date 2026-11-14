@@ -13,7 +13,7 @@ function cn(...classes: Array<string | false | null | undefined>): string {
 
 export function CounsellingCards({ data }: { data: ServicesData["counselling"] }) {
   return (
-    <section className="relative overflow-hidden pt-6 pb-6 mt-6 mb-6">
+    <section className="relative overflow-hidden pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
       <div
         aria-hidden="true"
         className="absolute right-0 top-0 h-[360px] w-full max-w-[760px] opacity-40 [background-image:radial-gradient(circle,#b9c8dd_1.2px,transparent_1.4px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_at_top_right,black_30%,transparent_72%)] [-webkit-mask-image:radial-gradient(ellipse_at_top_right,black_30%,transparent_72%)]"
@@ -33,7 +33,7 @@ export function CounsellingCards({ data }: { data: ServicesData["counselling"] }
         />
 
         <Stagger
-          className="mt-10 grid gap-5 lg:mt-14 lg:grid-cols-2"
+          className="mt-6 grid gap-5 sm:mt-8 lg:mt-14 lg:grid-cols-2"
           stagger={0.1}
         >
           {data.items.map((item) => (

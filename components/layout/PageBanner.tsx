@@ -32,7 +32,7 @@ export function PageBanner({ title, crumb }: PageBannerProps) {
 
       <PlaneTrail className="absolute left-[2%] top-3 hidden h-[110px] w-[190px] text-white/45 sm:block lg:left-[3%] lg:top-8 lg:h-[130px] lg:w-[220px]" />
 
-      <div className="mx-auto flex min-h-[210px] w-full max-w-[1320px] flex-col items-center justify-center px-4 py-12 text-center sm:min-h-[290px] sm:px-6 lg:min-h-[395px] lg:items-start lg:px-10 lg:pl-24 lg:text-left">
+      <div className="mx-auto flex min-h-[180px] w-full max-w-[1320px] flex-col items-center justify-center px-4 py-8 text-center sm:min-h-[290px] sm:px-6 sm:py-12 lg:min-h-[395px] lg:items-start lg:px-10 lg:pl-24 lg:text-left">
         <motion.h1
           initial={{ opacity: 0, x: -34 }}
           animate={{ opacity: 1, x: 0 }}

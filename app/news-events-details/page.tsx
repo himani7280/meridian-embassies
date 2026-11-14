@@ -50,22 +50,22 @@ export default async function BlogDetailsPage({
         crumb={pageBanners.blogDetails.title}
       />
 
-      <section className="pt-6 pb-6 mt-6 mb-6">
-        <div className="mx-auto grid w-full max-w-[1320px] gap-12 px-4 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 lg:px-10">
+      <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
+        <div className="mx-auto grid w-full max-w-[1320px] gap-8 px-4 sm:gap-10 sm:px-6 lg:grid-cols-[minmax(0,1fr)_340px] lg:gap-14 lg:px-10">
           <article>
             <Reveal>
               <time dateTime={new Date().toISOString()} className="text-[15px] text-[#6b7384]">
                 {currentDate()}
               </time>
-              <h1 className="mt-6 font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight text-[#043468] sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]">
+              <h1 className="mt-3 font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight text-[#043468] sm:mt-6 sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]">
                 {post.title}
                 <br />
                 <span className="text-[#dc3a1f]">{post.titleAccent}</span>
               </h1>
-              <p className="mt-5 max-w-[760px] text-base leading-8 text-[#6b7384]">{post.excerpt}</p>
+              <p className="mt-3 max-w-[760px] text-base leading-7 text-[#6b7384] sm:mt-5 sm:leading-8">{post.excerpt}</p>
             </Reveal>
 
-            <Reveal delay={0.1} className="mt-8">
+            <Reveal delay={0.1} className="mt-5 sm:mt-8">
               <div className="relative aspect-[825/563] overflow-hidden rounded-md shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
                 <Image
                   src={post.cover}
@@ -78,11 +78,11 @@ export default async function BlogDetailsPage({
               </div>
             </Reveal>
 
-            <div className="mt-10 space-y-8">
+            <div className="mt-6 space-y-6 sm:mt-10 sm:space-y-8">
               {post.sections.map((s) => (
                 <Reveal key={s.heading}>
                   {s.image ? (
-                    <div className="relative mb-8 aspect-[825/342] overflow-hidden rounded-md shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
+                    <div className="relative mb-5 aspect-[825/342] overflow-hidden rounded-md shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)] sm:mb-8">
                       <Image
                         src={s.image}
                         alt={s.imageAlt ?? ""}
@@ -92,11 +92,11 @@ export default async function BlogDetailsPage({
                       />
                     </div>
                   ) : null}
-                  <h2 className="flex items-center gap-3 font-(family-name:--family-title) text-2xl font-bold text-[#043468]">
+                  <h2 className="flex items-center gap-3 font-(family-name:--family-title) text-xl font-bold text-[#043468] sm:text-2xl">
                     <span className="h-[3px] w-7 shrink-0 bg-[#dc3a1f]" />
                     {s.heading}
                   </h2>
-                  <p className="mt-6 text-base leading-8 text-[#6b7384]">{s.body}</p>
+                  <p className="mt-3.5 text-base leading-7 text-[#6b7384] sm:mt-6 sm:leading-8">{s.body}</p>
                 </Reveal>
               ))}
             </div>
@@ -105,17 +105,17 @@ export default async function BlogDetailsPage({
           <aside className="lg:sticky lg:top-28 lg:self-start">
             <Reveal direction="left">
               <span className="block h-[3px] w-7 bg-[#dc3a1f]" />
-              <h2 className="mt-6 font-(family-name:--family-title) text-3xl font-extrabold text-[#043468]">
+              <h2 className="mt-4 font-(family-name:--family-title) text-2xl font-extrabold text-[#043468] sm:mt-6 sm:text-3xl">
                 Recent <span className="text-[#dc3a1f]">News</span>
               </h2>
             </Reveal>
 
             <Stagger className="mt-6 divide-y divide-[#043468]/10" stagger={0.1}>
               {all.map((p) => (
-                <StaggerItem key={p.id}>
+                <StaggerItem key={p.id} className="py-4 first:pt-0 last:pb-0">
                   <Link
                     href={`/news-events-details?slug=${p.slug}`}
-                    className="group flex items-center gap-4 py-4 first:pt-0"
+                    className="group flex items-center gap-4"
                   >
                     <span className="relative block h-[88px] w-[104px] shrink-0 overflow-hidden rounded-md shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
                       <Image

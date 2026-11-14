@@ -6,8 +6,8 @@ import { Eyebrow, GradientTitle } from "@/components/ui/SectionHeading";
 
 export function AboutSection({ data }: { data: HomeData["about"] }) {
   return (
-    <section className="relative pt-6 pb-6 mt-6 mb-6">
-      <div className="mx-auto grid w-full max-w-[1320px] items-stretch gap-10 px-4 sm:px-6 lg:grid-cols-[1fr_1.12fr] lg:gap-14 lg:px-10">
+    <section className="relative pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
+      <div className="mx-auto grid w-full max-w-[1320px] items-stretch gap-6 px-4 sm:gap-8 sm:px-6 lg:grid-cols-[1fr_1.12fr] lg:gap-14 lg:px-10">
         <Reveal direction="left" className="relative lg:h-full">
           <div className="group relative aspect-[4/5] overflow-hidden rounded-2xl shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] lg:aspect-auto lg:h-full lg:min-h-[640px]">
             <Image
@@ -20,11 +20,11 @@ export function AboutSection({ data }: { data: HomeData["about"] }) {
           </div>
         </Reveal>
 
-        <div className="flex flex-col lg:pt-6">
+        <div className="flex flex-col">
           <Reveal>
             <Eyebrow>{data.eyebrow}</Eyebrow>
           </Reveal>
-          <Reveal delay={0.08} className="mt-5">
+          <Reveal delay={0.08} className="mt-3 sm:mt-5">
             <GradientTitle
               title={data.title}
               line2={data.titleLine2}
@@ -32,17 +32,17 @@ export function AboutSection({ data }: { data: HomeData["about"] }) {
             />
           </Reveal>
           <Reveal delay={0.16}>
-            <p className="mt-6 max-w-[620px] text-[15px] leading-7 text-[#6b7384] sm:text-base sm:leading-8">
+            <p className="mt-4 max-w-[620px] text-[15px] leading-7 text-[#6b7384] sm:mt-6 sm:text-base sm:leading-8">
               {data.text}
             </p>
           </Reveal>
 
           <Reveal delay={0.24}>
-            <div className="mx-auto mt-6 flex max-w-[520px] flex-col items-center text-center">
-              <span className="h-10 w-[2px] bg-[#043468]" />
+            <div className="mx-auto mt-5 flex max-w-[520px] flex-col items-center text-center sm:mt-6">
+              <span className="h-8 w-[2px] bg-[#043468] sm:h-10" />
               <div className="flex w-full items-center gap-5">
                 <span className="h-px flex-1 bg-[#043468]/15" />
-                <span className="font-(family-name:--family-title) text-5xl font-extrabold text-[#043468]">
+                <span className="font-(family-name:--family-title) text-4xl font-extrabold text-[#043468] sm:text-5xl">
                   <CountUp to={data.statValue} suffix={data.statSuffix} />
                 </span>
                 <span className="h-px flex-1 bg-[#043468]/15" />
@@ -51,7 +51,7 @@ export function AboutSection({ data }: { data: HomeData["about"] }) {
             </div>
           </Reveal>
 
-          <Reveal delay={0.3} direction="right" className="mt-8 lg:mt-auto lg:pt-8">
+          <Reveal delay={0.3} direction="right" className="mt-6 sm:mt-8 lg:mt-auto lg:pt-8">
             <div className="group relative aspect-[621/270] overflow-hidden rounded-xl shadow-[0_6px_28px_-8px_rgba(4,52,104,0.14)]">
               <Image
                 src="/img/about-2.webp"

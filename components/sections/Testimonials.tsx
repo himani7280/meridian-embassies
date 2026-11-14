@@ -34,7 +34,7 @@ export function Testimonials({ intro, items }: Props) {
     .filter(({ index }) => index !== active);
 
   return (
-    <section className="relative overflow-hidden pt-6 pb-6 mt-6 mb-6">
+    <section className="relative overflow-hidden pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
       <PlaneTrail className="absolute left-0 top-24 hidden h-[110px] w-[190px] text-[#043468]/10 lg:block" />
 
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
@@ -47,7 +47,7 @@ export function Testimonials({ intro, items }: Props) {
           text={intro.text}
         />
 
-        <div className="mt-10 grid items-start gap-8 lg:mt-14 lg:grid-cols-[1fr_1.02fr] lg:gap-8">
+        <div className="mt-6 grid items-start gap-6 sm:mt-8 sm:gap-8 lg:mt-14 lg:grid-cols-[1fr_1.02fr] lg:gap-8">
           <Reveal direction="left">
             <div className="group relative aspect-[580/510] overflow-hidden rounded-xl shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
               <Image

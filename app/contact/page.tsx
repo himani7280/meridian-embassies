@@ -47,8 +47,8 @@ export default async function ContactPage() {
     <>
       <PageBanner title={pageBanners.contact.title} />
 
-      <section className="pt-6 pb-6 mt-6 mb-6">
-        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-10 px-4 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
+      <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
+        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-6 px-4 sm:gap-8 sm:px-6 lg:grid-cols-2 lg:gap-16 lg:px-10">
           <SectionHeading
             eyebrow="Contact Us"
             title="Get in Touch"
@@ -91,24 +91,24 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      <section className="pt-6 pb-6 mt-6 mb-6">
+      <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
         <div className="mx-auto grid w-full max-w-[1320px] gap-6 px-4 sm:px-6 lg:grid-cols-[1.1fr_1fr] lg:px-10">
           <Reveal direction="left">
-            <div className="h-full rounded-sm bg-[#f3f6fb] p-6 sm:p-9">
+            <div className="h-full rounded-sm bg-[#f3f6fb] p-5 sm:p-9">
               <SectionHeading
                 eyebrow="Send Us a Message"
                 title="We’d Love to"
                 accent="Hear from You"
                 inline
                 text="Fill out the form and our team will get back to you soon with the information you need."
-                className="mb-7"
+                className="mb-5 sm:mb-7"
               />
               <ContactForm />
             </div>
           </Reveal>
 
           <Reveal direction="right" delay={0.1}>
-            <div className="group relative min-h-[320px] overflow-hidden rounded-sm shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] lg:h-full">
+            <div className="group relative min-h-[280px] overflow-hidden rounded-sm shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)] sm:min-h-[320px] lg:h-full">
               <Image
                 src="/img/contact-passport.webp"
                 alt="Indian passport and boarding pass on a world map"
@@ -121,8 +121,8 @@ export default async function ContactPage() {
         </div>
       </section>
 
-      <section className="pt-6 pb-6 mt-6 mb-6">
-        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-10">
+      <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
+        <div className="mx-auto grid w-full max-w-[1320px] items-center gap-6 px-4 sm:gap-8 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:gap-12 lg:px-10">
           <div>
             <SectionHeading
               eyebrow="Our Location"
@@ -132,7 +132,7 @@ export default async function ContactPage() {
               text="You can visit our office for in-person support and guidance regarding visa, passport and other travel services."
               textClassName="max-w-[460px] text-lg"
             />
-            <Reveal delay={0.2} className="mt-7">
+            <Reveal delay={0.2} className="mt-5 sm:mt-7">
               <div className="group flex items-center gap-5 bg-[#f1f5fa] p-5 sm:p-6">
                 <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#dc3a1f] transition-all duration-300 group-hover:-translate-y-0.5 group-hover:scale-105 group-hover:bg-[#dc3a1f] group-hover:text-white">
                   <MapPin className="h-7 w-7 transition-transform duration-300 group-hover:scale-110" strokeWidth={2} />

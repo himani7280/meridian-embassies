@@ -12,7 +12,7 @@ interface Props {
 
 export function CtaSection({ data, contact }: Props) {
   return (
-    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#f3f7fc] via-white to-[#fff4f1] pt-6 pb-6 mt-6 mb-6 shadow-[0_8px_40px_-8px_rgba(4,52,104,0.22)]">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-[#f3f7fc] via-white to-[#fff4f1] pt-6 pb-6 mt-6 mb-6 sm:pt-8 sm:pb-8 sm:mt-8 sm:mb-8 lg:pt-12 lg:pb-12 lg:mt-12 lg:mb-12 shadow-[0_8px_40px_-8px_rgba(4,52,104,0.22)]">
       <span
         aria-hidden="true"
         className="pointer-events-none absolute -left-2 top-2 select-none font-(family-name:--family-title) text-[7rem] font-extrabold leading-none tracking-tight text-[#043468]/[0.045] sm:left-[3%] sm:text-[12rem] lg:top-0 lg:text-[18rem]"
@@ -29,7 +29,7 @@ export function CtaSection({ data, contact }: Props) {
       />
 
       <div className="relative mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
-        <div className="grid items-center gap-10 lg:grid-cols-12">
+        <div className="grid items-center gap-6 sm:gap-8 lg:grid-cols-12 lg:gap-10">
           <div className="lg:col-span-8">
             <Reveal direction="left">
               <h2 className="font-(family-name:--family-title) text-[1.35rem] font-extrabold leading-[1.18] tracking-tight text-[#043468] sm:text-4xl sm:leading-[1.12] lg:text-[2.9rem]">
@@ -49,7 +49,7 @@ export function CtaSection({ data, contact }: Props) {
               </h2>
             </Reveal>
             <Reveal direction="left" delay={0.12}>
-              <p className="mt-6 max-w-[560px] text-base leading-8 text-[#071f37]/80">
+              <p className="mt-4 max-w-[560px] text-base leading-7 text-[#071f37]/80 sm:mt-6 sm:leading-8">
                 {data.text}
               </p>
             </Reveal>
@@ -72,7 +72,7 @@ export function CtaSection({ data, contact }: Props) {
           </div>
         </div>
 
-        <div className="mt-6 flex flex-col items-start gap-6 lg:mt-6 lg:flex-row lg:items-center lg:justify-end lg:gap-8">
+        <div className="mt-5 flex flex-col items-start gap-5 sm:mt-6 sm:gap-6 lg:mt-6 lg:flex-row lg:items-center lg:justify-end lg:gap-8">
           <ArrowLine className="hidden h-4 w-[250px] text-[#043468] lg:block" />
           <Reveal direction="up" delay={0.2}>
             <p className="text-[13px] font-medium uppercase tracking-[0.08em] text-[#043468]">

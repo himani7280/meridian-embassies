@@ -29,7 +29,7 @@ export function Footer({ site }: { site: SiteData }) {
 
   return (
     <footer className="bg-[#071f37] text-white/80">
-      <div className="mx-auto grid w-full max-w-[1320px] gap-12 px-4 py-14 sm:px-6 lg:grid-cols-[1.25fr_1fr_1.35fr] lg:gap-0 lg:px-10 lg:py-16">
+      <div className="mx-auto grid w-full max-w-[1320px] gap-8 px-4 py-8 sm:gap-10 sm:px-6 sm:py-12 lg:grid-cols-[1.25fr_1fr_1.35fr] lg:gap-0 lg:px-10 lg:py-16">
         <Reveal className="lg:pr-12">
           <Link href="/" aria-label="The Meridian - Home" className="inline-block">
             <Image
@@ -40,10 +40,10 @@ export function Footer({ site }: { site: SiteData }) {
               className="h-10 w-auto sm:h-14 lg:h-16"
             />
           </Link>
-          <p className="mt-8 max-w-[300px] text-[15px] leading-7 text-white/70">
+          <p className="mt-4 max-w-[300px] text-[15px] leading-7 text-white/70 sm:mt-8">
             {site.brand.tagline}
           </p>
-          <ul className="mt-6 flex items-center gap-3">
+          <ul className="mt-4 flex items-center gap-3 sm:mt-6">
             {site.social.map((s) => {
               const Cmp = SOCIAL_ICONS[s.name];
               return (

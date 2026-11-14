@@ -14,9 +14,9 @@ interface Props {
 
 export function HomeServices({ intro, items }: Props) {
   return (
-    <section className="pt-6 pb-6 mt-6 mb-6">
+    <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
-        <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
+        <div className="flex flex-col gap-4 sm:gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             eyebrow={intro.eyebrow}
             title={intro.title}
@@ -29,7 +29,7 @@ export function HomeServices({ intro, items }: Props) {
           </Reveal>
         </div>
 
-        <div className="mt-10 grid items-center gap-10 lg:mt-6 lg:grid-cols-[1.02fr_1fr] lg:gap-12">
+        <div className="mt-6 grid items-center gap-6 sm:mt-8 sm:gap-8 lg:mt-6 lg:grid-cols-[1.02fr_1fr] lg:gap-12">
           <Reveal direction="left">
             <div className="group relative aspect-[584/470] overflow-hidden rounded-xl shadow-[0_10px_40px_-12px_rgba(4,52,104,0.18)]">
               <Image
@@ -44,10 +44,10 @@ export function HomeServices({ intro, items }: Props) {
 
           <Stagger className="divide-y divide-[#043468]/10" stagger={0.12}>
             {items.map((s) => (
-              <StaggerItem key={s.id}>
+              <StaggerItem key={s.id} className="py-3.5 first:pt-0 last:pb-0 sm:py-5">
                 <Link
                   href={s.href}
-                  className="group flex items-center gap-4 py-5 transition-transform duration-300 hover:translate-x-1.5 sm:gap-5"
+                  className="group flex items-center gap-4 transition-transform duration-300 hover:translate-x-1.5 sm:gap-5"
                 >
                   <span className="grid h-16 w-16 shrink-0 place-items-center rounded-full bg-[#e7eff9] text-[#043468] transition-all duration-300 group-hover:scale-105 group-hover:bg-[#043468] group-hover:text-white sm:h-[78px] sm:w-[78px]">
                     <Icon name={s.icon} className="h-7 w-7 transition-transform duration-300 group-hover:scale-110 sm:h-9 sm:w-9" strokeWidth={1.4} />

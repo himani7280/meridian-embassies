@@ -14,7 +14,7 @@ interface Props {
 
 export function ProcessSteps({ intro, steps }: Props) {
   return (
-    <section className="pt-6 pb-6 mt-6 mb-6">
+    <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
       <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
         <SectionHeading
           center
@@ -24,13 +24,13 @@ export function ProcessSteps({ intro, steps }: Props) {
           className="mx-auto"
         />
 
-        <div className="mt-6 divide-y divide-[#043468]/10 lg:mt-8">
+        <div className="mt-5 divide-y divide-[#043468]/10 sm:mt-6 lg:mt-8">
           {steps.map((step, i) => {
             const reverse = i % 2 === 1;
             return (
               <div
                 key={step.id}
-                className={cn("grid items-center gap-6 py-3 lg:gap-0", reverse ? "lg:grid-cols-[1fr_1.35fr]" : "lg:grid-cols-[1.35fr_1fr]")}
+                className={cn("grid items-center gap-4 py-4 first:pt-0 last:pb-0 sm:gap-5 sm:py-5 lg:gap-0 lg:py-3", reverse ? "lg:grid-cols-[1fr_1.35fr]" : "lg:grid-cols-[1.35fr_1fr]")}
               >
                 <Reveal
                   direction={reverse ? "right" : "left"}

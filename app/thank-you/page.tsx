@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 
 export default function ThankYouPage() {
   return (
-    <section className="flex min-h-[60vh] items-center justify-center px-4 py-20 text-center">
+    <section className="flex min-h-[60vh] items-center justify-center px-4 py-10 text-center sm:py-14 lg:py-20">
       <div className="max-w-[520px]">
         <span className="mx-auto mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-emerald-100">
           <CheckCircle2 className="h-10 w-10 text-emerald-600" strokeWidth={1.5} />

@@ -30,7 +30,7 @@ export default async function BlogPage() {
     <>
       <PageBanner title={pageBanners.blog.title} />
 
-      <section className="pt-6 pb-6 mt-6 mb-6">
+      <section className="pt-6 pb-6 sm:pt-8 sm:pb-8 lg:pt-12 lg:pb-12">
         <div className="mx-auto w-full max-w-[1320px] px-4 sm:px-6 lg:px-10">
           <SectionHeading
             eyebrow="News & Events"
@@ -41,7 +41,7 @@ export default async function BlogPage() {
             textClassName="max-w-[640px] text-lg"
           />
 
-          <Stagger className="mt-10 grid gap-x-7 gap-y-12 sm:grid-cols-2 lg:mt-14" stagger={0.12}>
+          <Stagger className="mt-6 grid gap-x-7 gap-y-8 sm:mt-8 sm:grid-cols-2 sm:gap-y-10 lg:mt-14 lg:gap-y-12" stagger={0.12}>
             {posts.map((post) => (
               <StaggerItem key={post.id}>
                 <article className="group">
